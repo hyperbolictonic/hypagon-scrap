@@ -15,8 +15,8 @@
   },
   "homepage": "https://github.com/hyperbolictonic/hypagon-scrap#readme",
   "scripts": {
-    "build": "npm run build --workspaces --if-present",
-    "test": "npm run test --workspaces --if-present",
+    "build": "npm run build -w hypagon-scrap-libxml2 && npm run build -w hypagon-scrap",
+    "test": "npm run build && npm run test -w hypagon-scrap-libxml2 && npm run test -w hypagon-scrap",
     "build:wasm": "npm run build:wasm -w hypagon-scrap-libxml2",
     "fetch:curl": "npm run fetch:curl -w hypagon-scrap",
     "pack:check": "node scripts/pack-check.mjs"
