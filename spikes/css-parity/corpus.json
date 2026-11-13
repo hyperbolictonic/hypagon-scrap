@@ -1,0 +1,76 @@
+{
+  "documents": [
+    {
+      "id": "catalog",
+      "html": "<html><body><div class=\"wrap\"><div class=\"products\"><article class=\"product card\" id=\"p1\" data-x=\"1\"><h3>Widget</h3><span class=\"price\">19.99</span><a href=\"/a\">A</a></article><article class=\"product\" id=\"p2\"><h3>Gadget</h3><span class=\"price\">29.99</span><a href=\"/b\">B</a></article></div></div></body></html>"
+    },
+    {
+      "id": "list",
+      "html": "<html><body><ul class=\"list\"><li class=\"active\">One</li><li>Two</li><li>Three</li><li>Four</li><li>Five</li></ul><p>solo</p><div class=\"lang\" data-lang=\"en-US\">x</div><div class=\"empty\"></div></body></html>"
+    },
+    {
+      "id": "table",
+      "html": "<html><body><table><thead><tr><th>Name</th><th>Price</th></tr></thead><tbody><tr class=\"row\"><td>A</td><td>1</td></tr><tr class=\"row\"><td>B</td><td>2</td></tr></tbody></table></body></html>"
+    },
+    {
+      "id": "form",
+      "html": "<html><body><form><input type=\"text\" name=\"q\"><input type=\"checkbox\" checked><select><option selected>One</option><option>Two</option></select><button disabled>Go</button></form></body></html>"
+    },
+    {
+      "id": "nested",
+      "html": "<html><body><div><section><p>a</p><p>b</p><span>c</span><p>d</p></section></div><div class=\"solo\"><em>only</em></div></body></html>"
+    }
+  ],
+  "selectors": [
+    "div",
+    "*",
+    "article.product",
+    ".card",
+    "#p1",
+    "div.product > h3",
+    "div.product h3",
+    "div.product > span.price",
+    "div.product span.price",
+    "ul > li",
+    "ul li",
+    "li:first-child",
+    "li:last-child",
+    "li:nth-child(2)",
+    "li:nth-child(odd)",
+    "li:nth-child(even)",
+    "li:nth-child(3n+1)",
+    "li:nth-child(-n+2)",
+    "li:nth-last-child(1)",
+    "li:first-of-type",
+    "li:last-of-type",
+    "p:only-child",
+    "span:only-of-type",
+    "div:empty",
+    ":root",
+    "a[href]",
+    "a[href='/a']",
+    "a[href^='/a']",
+    "a[href$='b']",
+    "a[href*='b']",
+    "div[class~='card']",
+    "div[data-lang|='en']",
+    "input[type='checkbox']",
+    "input[type='checkbox']:checked",
+    "option:checked",
+    "a:link",
+    "li:not(.active)",
+    "div:not([data-x])",
+    "article, li",
+    "div > ul > li + li",
+    "li ~ li",
+    "table tr:nth-of-type(2)",
+    "td:last-child",
+    "h3:contains('Widget')",
+    "*[class]",
+    "div.card[data-x='1']",
+    "input[disabled]",
+    "p:empty",
+    "section > p:nth-of-type(2n+1)",
+    "div.wrap div.products > article:nth-child(2)"
+  ]
+}

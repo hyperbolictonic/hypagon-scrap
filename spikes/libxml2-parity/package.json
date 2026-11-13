@@ -1,0 +1,17 @@
+{
+  "name": "libxml2-parity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "dependencies": {
+    "libxmljs2": "^0.37.0"
+  },
+  "allowScripts": {
+    "libxmljs2@0.37.0": true
+  }
+}

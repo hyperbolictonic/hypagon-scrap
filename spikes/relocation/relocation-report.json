@@ -1,0 +1,30 @@
+{
+ "summary": {
+  "total": 4,
+  "pass": 4,
+  "fail": 0,
+  "passRate": "100%"
+ },
+ "cases": [
+  {
+   "id": "cjk-longtext",
+   "pass": true,
+   "diffs": []
+  },
+  {
+   "id": "longattr",
+   "pass": true,
+   "diffs": []
+  },
+  {
+   "id": "longtext-repeated",
+   "pass": true,
+   "diffs": []
+  },
+  {
+   "id": "many-siblings",
+   "pass": true,
+   "diffs": []
+  }
+ ]
+}

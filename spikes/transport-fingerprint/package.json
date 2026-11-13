@@ -1,0 +1,16 @@
+{
+  "name": "transport-fingerprint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "dependencies": {
+    "@webcrawl/curl-impersonate": "^1.4.7",
+    "cuimp": "^2.1.2",
+    "curl-cffi-node": "^0.1.8"
+  }
+}

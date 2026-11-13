@@ -1,0 +1,15 @@
+# Normalise text files; keep platform and binary artifacts intact.
+* text=auto eol=lf
+
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+*.wasm binary
+*.exe binary
+*.tgz binary
+*.png binary
+*.jpg binary
+
+# Keep generated JS/TS maps consistent across platforms.
+*.map text eol=lf

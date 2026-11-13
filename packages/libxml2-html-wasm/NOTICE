@@ -1,0 +1,14 @@
+hypagon-scrap-libxml2 — NOTICE
+
+The original wrapper, build scripts and TypeScript binding are MIT licensed
+(see LICENSE). This package compiles and distributes libxml2:
+
+libxml2 — MIT
+Copyright (C) 1998-2012 Daniel Veillard. All Rights Reserved.
+https://gitlab.gnome.org/GNOME/libxml2
+
+Full licence text: LICENSE_LIBXML2.txt
+
+The WebAssembly artifact in `build/` is compiled from the 2.11.9 release with
+HTML and XPath enabled. No modifications are made to libxml2's own source beyond
+build configuration (feature selection and generated headers).

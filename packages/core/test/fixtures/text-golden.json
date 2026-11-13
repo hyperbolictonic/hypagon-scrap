@@ -1,0 +1,55 @@
+{
+ "mixed": {
+  "all-default": "own\ninner\ntail\n  lots   of\twhitespace \n here \nWidget 100\nA \nbold\n move\nAlpha\nBeta\nGamma",
+  "all-strip": "own\ninner\ntail\nlots   of\twhitespace \n here\nWidget 100\nA\nbold\nmove\nAlpha\nBeta\nGamma",
+  "all-sep": "own|inner|tail|  lots   of\twhitespace \n here |Widget 100|A |bold| move|Alpha|Beta|Gamma",
+  "all-noignore": "own\ninner\ntail\n  lots   of\twhitespace \n here \nWidget 100\nvar x = \"Widget 100\";\n.a{color:red}\nA \nbold\n move\nAlpha\nBeta\nGamma",
+  "all-novalid": "own\ninner\ntail\n  lots   of\twhitespace \n here \nWidget 100\n   \nA \nbold\n move\nAlpha\nBeta\nGamma",
+  "all-scoped": "own\ninner\ntail",
+  "all-script": "",
+  "find-exact": [
+   "/html/body/div[3]"
+  ],
+  "find-clean-query": [],
+  "find-partial": [
+   "/html/body/div[3]",
+   "/html/body/script"
+  ],
+  "find-case": [],
+  "find-first": [
+   "/html/body/ul/li[2]"
+  ],
+  "find-scoped": [
+   "/html/body/div[1]/span"
+  ],
+  "find-tail": [],
+  "regex-num": [
+   "/html/body/div[3]",
+   "/html/body/script"
+  ],
+  "regex-clean": [
+   "/html/body/div[2]"
+  ],
+  "regex-case": [],
+  "regex-noclean": [
+   "/html/body/div[2]"
+  ]
+ },
+ "nested": {
+  "all-default": "Title\nOne \ntwo\n three\nafter",
+  "all-strip": "Title\nOne\ntwo\nthree\nafter",
+  "all-sep": "Title|One |two| three|after",
+  "all-noignore": "Title\nOne \ntwo\n three\nignore()\nafter",
+  "all-novalid": "Title\nOne \ntwo\n three\nafter",
+  "find-exact": [],
+  "find-clean-query": [],
+  "find-partial": [],
+  "find-case": [],
+  "find-first": [],
+  "find-tail": [],
+  "regex-num": [],
+  "regex-clean": [],
+  "regex-case": [],
+  "regex-noclean": []
+ }
+}

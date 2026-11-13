@@ -1,0 +1,28 @@
+{
+  "name": "hypagon-scrap",
+  "private": true,
+  "type": "module",
+  "description": "I Can't Believe It's Not Scrapling — a Node port of Scrapling's parser and adaptive relocation",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyperbolictonic/hypagon-scrap.git"
+  },
+  "homepage": "https://github.com/hyperbolictonic/hypagon-scrap#readme",
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "build:wasm": "npm run build:wasm -w hypagon-scrap-libxml2",
+    "fetch:curl": "npm run fetch:curl -w hypagon-scrap",
+    "pack:check": "node scripts/pack-check.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.7.2"
+  }
+}

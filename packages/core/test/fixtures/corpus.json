@@ -1,0 +1,56 @@
+[
+  {
+    "id": "baseline-unchanged",
+    "target": "//article[@id='p1']",
+    "original": "<html><body><div class=\"container\"><section class=\"products\"><article class=\"product\" id=\"p1\"><h3>Product 1</h3><p class=\"description\">Description 1</p></article><article class=\"product\" id=\"p2\"><h3>Product 2</h3><p class=\"description\">Description 2</p></article></section></div></body></html>",
+    "changed": "<html><body><div class=\"container\"><section class=\"products\"><article class=\"product\" id=\"p1\"><h3>Product 1</h3><p class=\"description\">Description 1</p></article><article class=\"product\" id=\"p2\"><h3>Product 2</h3><p class=\"description\">Description 2</p></article></section></div></body></html>"
+  },
+  {
+    "id": "class-renamed",
+    "target": "//article[@id='p1']",
+    "original": "<html><body><div class=\"container\"><section class=\"products\"><article class=\"product\" id=\"p1\"><h3>Product 1</h3><p class=\"description\">Description 1</p></article><article class=\"product\" id=\"p2\"><h3>Product 2</h3><p class=\"description\">Description 2</p></article></section></div></body></html>",
+    "changed": "<html><body><div class=\"container\"><section class=\"products\"><article class=\"product new-class\" id=\"p1\"><h3>Product 1</h3><p class=\"description\">Description 1</p></article><article class=\"product new-class\" id=\"p2\"><h3>Product 2</h3><p class=\"description\">Description 2</p></article></section></div></body></html>"
+  },
+  {
+    "id": "sibling-inserted",
+    "target": "//article[@id='p1']",
+    "original": "<html><body><div class=\"container\"><section class=\"products\"><article class=\"product\" id=\"p1\"><h3>Product 1</h3></article><article class=\"product\" id=\"p2\"><h3>Product 2</h3></article></section></div></body></html>",
+    "changed": "<html><body><div class=\"container\"><section class=\"products\"><article class=\"product\" id=\"p0\"><h3>Product 0</h3></article><article class=\"product\" id=\"p1\"><h3>Product 1</h3></article><article class=\"product\" id=\"p2\"><h3>Product 2</h3></article></section></div></body></html>"
+  },
+  {
+    "id": "wrapped-in-div",
+    "target": "//article[@id='p1']",
+    "original": "<html><body><div class=\"container\"><section class=\"products\"><article class=\"product\" id=\"p1\"><h3>Product 1</h3><p class=\"description\">Description 1</p></article></section></div></body></html>",
+    "changed": "<html><body><div class=\"new-container\"><div class=\"product-wrapper\"><section class=\"products\"><article class=\"product new-class\" data-id=\"p1\"><div class=\"product-info\"><h3>Product 1</h3><p class=\"new-description\">Description 1</p></div></article><article class=\"product new-class\" data-id=\"p2\"><div class=\"product-info\"><h3>Product 2</h3><p class=\"new-description\">Description 2</p></div></article></section></div></div></body></html>"
+  },
+  {
+    "id": "id-renamed",
+    "target": "//div[@id='price']",
+    "original": "<html><body><div class=\"card\"><span class=\"label\">Price</span><div id=\"price\" class=\"value\">19.99</div></div></body></html>",
+    "changed": "<html><body><div class=\"card\"><span class=\"label\">Price</span><div id=\"price-value\" class=\"value big\">19.99</div></div></body></html>"
+  },
+  {
+    "id": "text-changed",
+    "target": "//p[@class='summary']",
+    "original": "<html><body><div class=\"item\"><h2>Widget</h2><p class=\"summary\">A small widget for testing</p></div></body></html>",
+    "changed": "<html><body><div class=\"item\"><h2>Widget</h2><p class=\"summary\">A much smaller widget, revised for a longer description</p></div></body></html>"
+  },
+  {
+    "id": "table-layout",
+    "target": "//tr[@class='row'][2]",
+    "original": "<html><body><table><tr class=\"row\"><td>Name</td><td>Price</td></tr><tr class=\"row\"><td>Widget</td><td>19.99</td></tr></table></body></html>",
+    "changed": "<html><body><table class=\"data\"><thead><tr class=\"header\"><th>Name</th><th>Price</th></tr></thead><tbody><tr class=\"row item\"><td>Widget</td><td>19.99</td></tr></tbody></table></body></html>"
+  },
+  {
+    "id": "similar-list",
+    "target": "//div[@class='card'][1]",
+    "original": "<html><body><div class=\"list\"><div class=\"card\"><a href=\"/a\"><span>Alpha</span></a></div><div class=\"card\"><a href=\"/b\"><span>Beta</span></a></div><div class=\"card\"><a href=\"/c\"><span>Gamma</span></a></div></div></body></html>",
+    "changed": "<html><body><div class=\"list\"><div class=\"card\"><a href=\"/a\"><span>Alpha</span></a></div><div class=\"card\"><a href=\"/b\"><span>Beta</span></a></div><div class=\"card\"><a href=\"/c\"><span>Gamma</span></a></div><div class=\"card\"><a href=\"/d\"><span>Delta</span></a></div></div></body></html>"
+  },
+  {
+    "id": "whitespace-heavy",
+    "target": "//div[@class='content']",
+    "original": "<html>\n  <body>\n    <div class=\"wrap\">\n      <div class=\"content\">\n        <p>Line one</p>\n      </div>\n    </div>\n  </body>\n</html>",
+    "changed": "<html>\n  <body>\n\n    <div class=\"wrap\">\n\n      <div class=\"content\">\n\n        <p>Line one</p>\n\n      </div>\n\n    </div>\n  </body>\n</html>"
+  }
+]

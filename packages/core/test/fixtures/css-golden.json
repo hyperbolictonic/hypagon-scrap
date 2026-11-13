@@ -1,0 +1,1222 @@
+{
+ "catalog": {
+  "div": {
+   "xpath": "descendant-or-self::div",
+   "paths": [
+    "/html/body/div",
+    "/html/body/div/div"
+   ]
+  },
+  "*": {
+   "xpath": "descendant-or-self::*",
+   "paths": [
+    "/html",
+    "/html/body",
+    "/html/body/div",
+    "/html/body/div/div",
+    "/html/body/div/div/article[1]",
+    "/html/body/div/div/article[1]/h3",
+    "/html/body/div/div/article[1]/span",
+    "/html/body/div/div/article[1]/a",
+    "/html/body/div/div/article[2]",
+    "/html/body/div/div/article[2]/h3",
+    "/html/body/div/div/article[2]/span",
+    "/html/body/div/div/article[2]/a"
+   ]
+  },
+  "article.product": {
+   "xpath": "descendant-or-self::article[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]",
+   "paths": [
+    "/html/body/div/div/article[1]",
+    "/html/body/div/div/article[2]"
+   ]
+  },
+  ".card": {
+   "xpath": "descendant-or-self::*[@class and contains(@class, 'card') and contains(concat(' ', normalize-space(@class), ' '), ' card ')]",
+   "paths": [
+    "/html/body/div/div/article[1]"
+   ]
+  },
+  "#p1": {
+   "xpath": "descendant-or-self::*[@id = 'p1']",
+   "paths": [
+    "/html/body/div/div/article[1]"
+   ]
+  },
+  "div.product > h3": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/h3",
+   "paths": []
+  },
+  "div.product h3": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/descendant::h3",
+   "paths": []
+  },
+  "div.product > span.price": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/span[@class and contains(@class, 'price') and contains(concat(' ', normalize-space(@class), ' '), ' price ')]",
+   "paths": []
+  },
+  "div.product span.price": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/descendant::span[@class and contains(@class, 'price') and contains(concat(' ', normalize-space(@class), ' '), ' price ')]",
+   "paths": []
+  },
+  "ul > li": {
+   "xpath": "descendant-or-self::ul/li",
+   "paths": []
+  },
+  "ul li": {
+   "xpath": "descendant-or-self::ul/descendant::li",
+   "paths": []
+  },
+  "li:first-child": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) = 0]",
+   "paths": []
+  },
+  "li:last-child": {
+   "xpath": "descendant-or-self::li[count(following-sibling::*) = 0]",
+   "paths": []
+  },
+  "li:nth-child(2)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) = 1]",
+   "paths": []
+  },
+  "li:nth-child(odd)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) mod 2 = 0]",
+   "paths": []
+  },
+  "li:nth-child(even)": {
+   "xpath": "descendant-or-self::li[(count(preceding-sibling::*) +1) mod 2 = 0]",
+   "paths": []
+  },
+  "li:nth-child(3n+1)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) mod 3 = 0]",
+   "paths": []
+  },
+  "li:nth-child(-n+2)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) <= 1]",
+   "paths": []
+  },
+  "li:nth-last-child(1)": {
+   "xpath": "descendant-or-self::li[count(following-sibling::*) = 0]",
+   "paths": []
+  },
+  "li:first-of-type": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::li) = 0]",
+   "paths": []
+  },
+  "li:last-of-type": {
+   "xpath": "descendant-or-self::li[count(following-sibling::li) = 0]",
+   "paths": []
+  },
+  "p:only-child": {
+   "xpath": "descendant-or-self::p[count(preceding-sibling::*) = 0 and count(following-sibling::*) = 0]",
+   "paths": []
+  },
+  "span:only-of-type": {
+   "xpath": "descendant-or-self::span[count(preceding-sibling::span) = 0 and count(following-sibling::span) = 0]",
+   "paths": [
+    "/html/body/div/div/article[1]/span",
+    "/html/body/div/div/article[2]/span"
+   ]
+  },
+  "div:empty": {
+   "xpath": "descendant-or-self::div[not(*) and not(string-length())]",
+   "paths": []
+  },
+  ":root": {
+   "xpath": "descendant-or-self::*[not(parent::*)]",
+   "paths": [
+    "/html"
+   ]
+  },
+  "a[href]": {
+   "xpath": "descendant-or-self::a[@href]",
+   "paths": [
+    "/html/body/div/div/article[1]/a",
+    "/html/body/div/div/article[2]/a"
+   ]
+  },
+  "a[href='/a']": {
+   "xpath": "descendant-or-self::a[@href = '/a']",
+   "paths": [
+    "/html/body/div/div/article[1]/a"
+   ]
+  },
+  "a[href^='/a']": {
+   "xpath": "descendant-or-self::a[@href and starts-with(@href, '/a')]",
+   "paths": [
+    "/html/body/div/div/article[1]/a"
+   ]
+  },
+  "a[href$='b']": {
+   "xpath": "descendant-or-self::a[@href and substring(@href, string-length(@href)-0) = 'b']",
+   "paths": [
+    "/html/body/div/div/article[2]/a"
+   ]
+  },
+  "a[href*='b']": {
+   "xpath": "descendant-or-self::a[@href and contains(@href, 'b')]",
+   "paths": [
+    "/html/body/div/div/article[2]/a"
+   ]
+  },
+  "div[class~='card']": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'card') and contains(concat(' ', normalize-space(@class), ' '), ' card ')]",
+   "paths": []
+  },
+  "div[data-lang|='en']": {
+   "xpath": "descendant-or-self::div[@data-lang and (@data-lang = 'en' or starts-with(@data-lang, 'en-'))]",
+   "paths": []
+  },
+  "input[type='checkbox']": {
+   "xpath": "descendant-or-self::input[@type = 'checkbox']",
+   "paths": []
+  },
+  "input[type='checkbox']:checked": {
+   "xpath": "descendant-or-self::input[(@type = 'checkbox') and ((@selected and name(.) = 'option') or (@checked and (name(.) = 'input' or name(.) = 'command')and (@type = 'checkbox' or @type = 'radio')))]",
+   "paths": []
+  },
+  "option:checked": {
+   "xpath": "descendant-or-self::option[(@selected and name(.) = 'option') or (@checked and (name(.) = 'input' or name(.) = 'command')and (@type = 'checkbox' or @type = 'radio'))]",
+   "paths": []
+  },
+  "a:link": {
+   "xpath": "descendant-or-self::a[@href and (name(.) = 'a' or name(.) = 'link' or name(.) = 'area')]",
+   "paths": [
+    "/html/body/div/div/article[1]/a",
+    "/html/body/div/div/article[2]/a"
+   ]
+  },
+  "li:not(.active)": {
+   "xpath": "descendant-or-self::li[not(@class and contains(@class, 'active') and contains(concat(' ', normalize-space(@class), ' '), ' active '))]",
+   "paths": []
+  },
+  "div:not([data-x])": {
+   "xpath": "descendant-or-self::div[not(@data-x)]",
+   "paths": [
+    "/html/body/div",
+    "/html/body/div/div"
+   ]
+  },
+  "article, li": {
+   "xpath": "descendant-or-self::article | descendant-or-self::li",
+   "paths": [
+    "/html/body/div/div/article[1]",
+    "/html/body/div/div/article[2]"
+   ]
+  },
+  "div > ul > li + li": {
+   "xpath": "descendant-or-self::div/ul/li/following-sibling::*[(self::li) and (position() = 1)]",
+   "paths": []
+  },
+  "li ~ li": {
+   "xpath": "descendant-or-self::li/following-sibling::li",
+   "paths": []
+  },
+  "table tr:nth-of-type(2)": {
+   "xpath": "descendant-or-self::table/descendant::tr[count(preceding-sibling::tr) = 1]",
+   "paths": []
+  },
+  "td:last-child": {
+   "xpath": "descendant-or-self::td[count(following-sibling::*) = 0]",
+   "paths": []
+  },
+  "h3:contains('Widget')": {
+   "xpath": "descendant-or-self::h3[contains(., 'Widget')]",
+   "paths": [
+    "/html/body/div/div/article[1]/h3"
+   ]
+  },
+  "*[class]": {
+   "xpath": "descendant-or-self::*[@class]",
+   "paths": [
+    "/html/body/div",
+    "/html/body/div/div",
+    "/html/body/div/div/article[1]",
+    "/html/body/div/div/article[1]/span",
+    "/html/body/div/div/article[2]",
+    "/html/body/div/div/article[2]/span"
+   ]
+  },
+  "div.card[data-x='1']": {
+   "xpath": "descendant-or-self::div[(@class and contains(@class, 'card') and contains(concat(' ', normalize-space(@class), ' '), ' card ')) and (@data-x = '1')]",
+   "paths": []
+  },
+  "input[disabled]": {
+   "xpath": "descendant-or-self::input[@disabled]",
+   "paths": []
+  },
+  "p:empty": {
+   "xpath": "descendant-or-self::p[not(*) and not(string-length())]",
+   "paths": []
+  },
+  "section > p:nth-of-type(2n+1)": {
+   "xpath": "descendant-or-self::section/p[count(preceding-sibling::p) mod 2 = 0]",
+   "paths": []
+  },
+  "div.wrap div.products > article:nth-child(2)": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'wrap') and contains(concat(' ', normalize-space(@class), ' '), ' wrap ')]/descendant::div[@class and contains(@class, 'products') and contains(concat(' ', normalize-space(@class), ' '), ' products ')]/article[count(preceding-sibling::*) = 1]",
+   "paths": [
+    "/html/body/div/div/article[2]"
+   ]
+  }
+ },
+ "list": {
+  "div": {
+   "xpath": "descendant-or-self::div",
+   "paths": [
+    "/html/body/div[1]",
+    "/html/body/div[2]"
+   ]
+  },
+  "*": {
+   "xpath": "descendant-or-self::*",
+   "paths": [
+    "/html",
+    "/html/body",
+    "/html/body/ul",
+    "/html/body/ul/li[1]",
+    "/html/body/ul/li[2]",
+    "/html/body/ul/li[3]",
+    "/html/body/ul/li[4]",
+    "/html/body/ul/li[5]",
+    "/html/body/p",
+    "/html/body/div[1]",
+    "/html/body/div[2]"
+   ]
+  },
+  "article.product": {
+   "xpath": "descendant-or-self::article[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]",
+   "paths": []
+  },
+  ".card": {
+   "xpath": "descendant-or-self::*[@class and contains(@class, 'card') and contains(concat(' ', normalize-space(@class), ' '), ' card ')]",
+   "paths": []
+  },
+  "#p1": {
+   "xpath": "descendant-or-self::*[@id = 'p1']",
+   "paths": []
+  },
+  "div.product > h3": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/h3",
+   "paths": []
+  },
+  "div.product h3": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/descendant::h3",
+   "paths": []
+  },
+  "div.product > span.price": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/span[@class and contains(@class, 'price') and contains(concat(' ', normalize-space(@class), ' '), ' price ')]",
+   "paths": []
+  },
+  "div.product span.price": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/descendant::span[@class and contains(@class, 'price') and contains(concat(' ', normalize-space(@class), ' '), ' price ')]",
+   "paths": []
+  },
+  "ul > li": {
+   "xpath": "descendant-or-self::ul/li",
+   "paths": [
+    "/html/body/ul/li[1]",
+    "/html/body/ul/li[2]",
+    "/html/body/ul/li[3]",
+    "/html/body/ul/li[4]",
+    "/html/body/ul/li[5]"
+   ]
+  },
+  "ul li": {
+   "xpath": "descendant-or-self::ul/descendant::li",
+   "paths": [
+    "/html/body/ul/li[1]",
+    "/html/body/ul/li[2]",
+    "/html/body/ul/li[3]",
+    "/html/body/ul/li[4]",
+    "/html/body/ul/li[5]"
+   ]
+  },
+  "li:first-child": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) = 0]",
+   "paths": [
+    "/html/body/ul/li[1]"
+   ]
+  },
+  "li:last-child": {
+   "xpath": "descendant-or-self::li[count(following-sibling::*) = 0]",
+   "paths": [
+    "/html/body/ul/li[5]"
+   ]
+  },
+  "li:nth-child(2)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) = 1]",
+   "paths": [
+    "/html/body/ul/li[2]"
+   ]
+  },
+  "li:nth-child(odd)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) mod 2 = 0]",
+   "paths": [
+    "/html/body/ul/li[1]",
+    "/html/body/ul/li[3]",
+    "/html/body/ul/li[5]"
+   ]
+  },
+  "li:nth-child(even)": {
+   "xpath": "descendant-or-self::li[(count(preceding-sibling::*) +1) mod 2 = 0]",
+   "paths": [
+    "/html/body/ul/li[2]",
+    "/html/body/ul/li[4]"
+   ]
+  },
+  "li:nth-child(3n+1)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) mod 3 = 0]",
+   "paths": [
+    "/html/body/ul/li[1]",
+    "/html/body/ul/li[4]"
+   ]
+  },
+  "li:nth-child(-n+2)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) <= 1]",
+   "paths": [
+    "/html/body/ul/li[1]",
+    "/html/body/ul/li[2]"
+   ]
+  },
+  "li:nth-last-child(1)": {
+   "xpath": "descendant-or-self::li[count(following-sibling::*) = 0]",
+   "paths": [
+    "/html/body/ul/li[5]"
+   ]
+  },
+  "li:first-of-type": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::li) = 0]",
+   "paths": [
+    "/html/body/ul/li[1]"
+   ]
+  },
+  "li:last-of-type": {
+   "xpath": "descendant-or-self::li[count(following-sibling::li) = 0]",
+   "paths": [
+    "/html/body/ul/li[5]"
+   ]
+  },
+  "p:only-child": {
+   "xpath": "descendant-or-self::p[count(preceding-sibling::*) = 0 and count(following-sibling::*) = 0]",
+   "paths": []
+  },
+  "span:only-of-type": {
+   "xpath": "descendant-or-self::span[count(preceding-sibling::span) = 0 and count(following-sibling::span) = 0]",
+   "paths": []
+  },
+  "div:empty": {
+   "xpath": "descendant-or-self::div[not(*) and not(string-length())]",
+   "paths": [
+    "/html/body/div[2]"
+   ]
+  },
+  ":root": {
+   "xpath": "descendant-or-self::*[not(parent::*)]",
+   "paths": [
+    "/html"
+   ]
+  },
+  "a[href]": {
+   "xpath": "descendant-or-self::a[@href]",
+   "paths": []
+  },
+  "a[href='/a']": {
+   "xpath": "descendant-or-self::a[@href = '/a']",
+   "paths": []
+  },
+  "a[href^='/a']": {
+   "xpath": "descendant-or-self::a[@href and starts-with(@href, '/a')]",
+   "paths": []
+  },
+  "a[href$='b']": {
+   "xpath": "descendant-or-self::a[@href and substring(@href, string-length(@href)-0) = 'b']",
+   "paths": []
+  },
+  "a[href*='b']": {
+   "xpath": "descendant-or-self::a[@href and contains(@href, 'b')]",
+   "paths": []
+  },
+  "div[class~='card']": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'card') and contains(concat(' ', normalize-space(@class), ' '), ' card ')]",
+   "paths": []
+  },
+  "div[data-lang|='en']": {
+   "xpath": "descendant-or-self::div[@data-lang and (@data-lang = 'en' or starts-with(@data-lang, 'en-'))]",
+   "paths": [
+    "/html/body/div[1]"
+   ]
+  },
+  "input[type='checkbox']": {
+   "xpath": "descendant-or-self::input[@type = 'checkbox']",
+   "paths": []
+  },
+  "input[type='checkbox']:checked": {
+   "xpath": "descendant-or-self::input[(@type = 'checkbox') and ((@selected and name(.) = 'option') or (@checked and (name(.) = 'input' or name(.) = 'command')and (@type = 'checkbox' or @type = 'radio')))]",
+   "paths": []
+  },
+  "option:checked": {
+   "xpath": "descendant-or-self::option[(@selected and name(.) = 'option') or (@checked and (name(.) = 'input' or name(.) = 'command')and (@type = 'checkbox' or @type = 'radio'))]",
+   "paths": []
+  },
+  "a:link": {
+   "xpath": "descendant-or-self::a[@href and (name(.) = 'a' or name(.) = 'link' or name(.) = 'area')]",
+   "paths": []
+  },
+  "li:not(.active)": {
+   "xpath": "descendant-or-self::li[not(@class and contains(@class, 'active') and contains(concat(' ', normalize-space(@class), ' '), ' active '))]",
+   "paths": [
+    "/html/body/ul/li[2]",
+    "/html/body/ul/li[3]",
+    "/html/body/ul/li[4]",
+    "/html/body/ul/li[5]"
+   ]
+  },
+  "div:not([data-x])": {
+   "xpath": "descendant-or-self::div[not(@data-x)]",
+   "paths": [
+    "/html/body/div[1]",
+    "/html/body/div[2]"
+   ]
+  },
+  "article, li": {
+   "xpath": "descendant-or-self::article | descendant-or-self::li",
+   "paths": [
+    "/html/body/ul/li[1]",
+    "/html/body/ul/li[2]",
+    "/html/body/ul/li[3]",
+    "/html/body/ul/li[4]",
+    "/html/body/ul/li[5]"
+   ]
+  },
+  "div > ul > li + li": {
+   "xpath": "descendant-or-self::div/ul/li/following-sibling::*[(self::li) and (position() = 1)]",
+   "paths": []
+  },
+  "li ~ li": {
+   "xpath": "descendant-or-self::li/following-sibling::li",
+   "paths": [
+    "/html/body/ul/li[2]",
+    "/html/body/ul/li[3]",
+    "/html/body/ul/li[4]",
+    "/html/body/ul/li[5]"
+   ]
+  },
+  "table tr:nth-of-type(2)": {
+   "xpath": "descendant-or-self::table/descendant::tr[count(preceding-sibling::tr) = 1]",
+   "paths": []
+  },
+  "td:last-child": {
+   "xpath": "descendant-or-self::td[count(following-sibling::*) = 0]",
+   "paths": []
+  },
+  "h3:contains('Widget')": {
+   "xpath": "descendant-or-self::h3[contains(., 'Widget')]",
+   "paths": []
+  },
+  "*[class]": {
+   "xpath": "descendant-or-self::*[@class]",
+   "paths": [
+    "/html/body/ul",
+    "/html/body/ul/li[1]",
+    "/html/body/div[1]",
+    "/html/body/div[2]"
+   ]
+  },
+  "div.card[data-x='1']": {
+   "xpath": "descendant-or-self::div[(@class and contains(@class, 'card') and contains(concat(' ', normalize-space(@class), ' '), ' card ')) and (@data-x = '1')]",
+   "paths": []
+  },
+  "input[disabled]": {
+   "xpath": "descendant-or-self::input[@disabled]",
+   "paths": []
+  },
+  "p:empty": {
+   "xpath": "descendant-or-self::p[not(*) and not(string-length())]",
+   "paths": []
+  },
+  "section > p:nth-of-type(2n+1)": {
+   "xpath": "descendant-or-self::section/p[count(preceding-sibling::p) mod 2 = 0]",
+   "paths": []
+  },
+  "div.wrap div.products > article:nth-child(2)": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'wrap') and contains(concat(' ', normalize-space(@class), ' '), ' wrap ')]/descendant::div[@class and contains(@class, 'products') and contains(concat(' ', normalize-space(@class), ' '), ' products ')]/article[count(preceding-sibling::*) = 1]",
+   "paths": []
+  }
+ },
+ "table": {
+  "div": {
+   "xpath": "descendant-or-self::div",
+   "paths": []
+  },
+  "*": {
+   "xpath": "descendant-or-self::*",
+   "paths": [
+    "/html",
+    "/html/body",
+    "/html/body/table",
+    "/html/body/table/thead",
+    "/html/body/table/thead/tr",
+    "/html/body/table/thead/tr/th[1]",
+    "/html/body/table/thead/tr/th[2]",
+    "/html/body/table/tbody",
+    "/html/body/table/tbody/tr[1]",
+    "/html/body/table/tbody/tr[1]/td[1]",
+    "/html/body/table/tbody/tr[1]/td[2]",
+    "/html/body/table/tbody/tr[2]",
+    "/html/body/table/tbody/tr[2]/td[1]",
+    "/html/body/table/tbody/tr[2]/td[2]"
+   ]
+  },
+  "article.product": {
+   "xpath": "descendant-or-self::article[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]",
+   "paths": []
+  },
+  ".card": {
+   "xpath": "descendant-or-self::*[@class and contains(@class, 'card') and contains(concat(' ', normalize-space(@class), ' '), ' card ')]",
+   "paths": []
+  },
+  "#p1": {
+   "xpath": "descendant-or-self::*[@id = 'p1']",
+   "paths": []
+  },
+  "div.product > h3": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/h3",
+   "paths": []
+  },
+  "div.product h3": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/descendant::h3",
+   "paths": []
+  },
+  "div.product > span.price": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/span[@class and contains(@class, 'price') and contains(concat(' ', normalize-space(@class), ' '), ' price ')]",
+   "paths": []
+  },
+  "div.product span.price": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/descendant::span[@class and contains(@class, 'price') and contains(concat(' ', normalize-space(@class), ' '), ' price ')]",
+   "paths": []
+  },
+  "ul > li": {
+   "xpath": "descendant-or-self::ul/li",
+   "paths": []
+  },
+  "ul li": {
+   "xpath": "descendant-or-self::ul/descendant::li",
+   "paths": []
+  },
+  "li:first-child": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) = 0]",
+   "paths": []
+  },
+  "li:last-child": {
+   "xpath": "descendant-or-self::li[count(following-sibling::*) = 0]",
+   "paths": []
+  },
+  "li:nth-child(2)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) = 1]",
+   "paths": []
+  },
+  "li:nth-child(odd)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) mod 2 = 0]",
+   "paths": []
+  },
+  "li:nth-child(even)": {
+   "xpath": "descendant-or-self::li[(count(preceding-sibling::*) +1) mod 2 = 0]",
+   "paths": []
+  },
+  "li:nth-child(3n+1)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) mod 3 = 0]",
+   "paths": []
+  },
+  "li:nth-child(-n+2)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) <= 1]",
+   "paths": []
+  },
+  "li:nth-last-child(1)": {
+   "xpath": "descendant-or-self::li[count(following-sibling::*) = 0]",
+   "paths": []
+  },
+  "li:first-of-type": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::li) = 0]",
+   "paths": []
+  },
+  "li:last-of-type": {
+   "xpath": "descendant-or-self::li[count(following-sibling::li) = 0]",
+   "paths": []
+  },
+  "p:only-child": {
+   "xpath": "descendant-or-self::p[count(preceding-sibling::*) = 0 and count(following-sibling::*) = 0]",
+   "paths": []
+  },
+  "span:only-of-type": {
+   "xpath": "descendant-or-self::span[count(preceding-sibling::span) = 0 and count(following-sibling::span) = 0]",
+   "paths": []
+  },
+  "div:empty": {
+   "xpath": "descendant-or-self::div[not(*) and not(string-length())]",
+   "paths": []
+  },
+  ":root": {
+   "xpath": "descendant-or-self::*[not(parent::*)]",
+   "paths": [
+    "/html"
+   ]
+  },
+  "a[href]": {
+   "xpath": "descendant-or-self::a[@href]",
+   "paths": []
+  },
+  "a[href='/a']": {
+   "xpath": "descendant-or-self::a[@href = '/a']",
+   "paths": []
+  },
+  "a[href^='/a']": {
+   "xpath": "descendant-or-self::a[@href and starts-with(@href, '/a')]",
+   "paths": []
+  },
+  "a[href$='b']": {
+   "xpath": "descendant-or-self::a[@href and substring(@href, string-length(@href)-0) = 'b']",
+   "paths": []
+  },
+  "a[href*='b']": {
+   "xpath": "descendant-or-self::a[@href and contains(@href, 'b')]",
+   "paths": []
+  },
+  "div[class~='card']": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'card') and contains(concat(' ', normalize-space(@class), ' '), ' card ')]",
+   "paths": []
+  },
+  "div[data-lang|='en']": {
+   "xpath": "descendant-or-self::div[@data-lang and (@data-lang = 'en' or starts-with(@data-lang, 'en-'))]",
+   "paths": []
+  },
+  "input[type='checkbox']": {
+   "xpath": "descendant-or-self::input[@type = 'checkbox']",
+   "paths": []
+  },
+  "input[type='checkbox']:checked": {
+   "xpath": "descendant-or-self::input[(@type = 'checkbox') and ((@selected and name(.) = 'option') or (@checked and (name(.) = 'input' or name(.) = 'command')and (@type = 'checkbox' or @type = 'radio')))]",
+   "paths": []
+  },
+  "option:checked": {
+   "xpath": "descendant-or-self::option[(@selected and name(.) = 'option') or (@checked and (name(.) = 'input' or name(.) = 'command')and (@type = 'checkbox' or @type = 'radio'))]",
+   "paths": []
+  },
+  "a:link": {
+   "xpath": "descendant-or-self::a[@href and (name(.) = 'a' or name(.) = 'link' or name(.) = 'area')]",
+   "paths": []
+  },
+  "li:not(.active)": {
+   "xpath": "descendant-or-self::li[not(@class and contains(@class, 'active') and contains(concat(' ', normalize-space(@class), ' '), ' active '))]",
+   "paths": []
+  },
+  "div:not([data-x])": {
+   "xpath": "descendant-or-self::div[not(@data-x)]",
+   "paths": []
+  },
+  "article, li": {
+   "xpath": "descendant-or-self::article | descendant-or-self::li",
+   "paths": []
+  },
+  "div > ul > li + li": {
+   "xpath": "descendant-or-self::div/ul/li/following-sibling::*[(self::li) and (position() = 1)]",
+   "paths": []
+  },
+  "li ~ li": {
+   "xpath": "descendant-or-self::li/following-sibling::li",
+   "paths": []
+  },
+  "table tr:nth-of-type(2)": {
+   "xpath": "descendant-or-self::table/descendant::tr[count(preceding-sibling::tr) = 1]",
+   "paths": [
+    "/html/body/table/tbody/tr[2]"
+   ]
+  },
+  "td:last-child": {
+   "xpath": "descendant-or-self::td[count(following-sibling::*) = 0]",
+   "paths": [
+    "/html/body/table/tbody/tr[1]/td[2]",
+    "/html/body/table/tbody/tr[2]/td[2]"
+   ]
+  },
+  "h3:contains('Widget')": {
+   "xpath": "descendant-or-self::h3[contains(., 'Widget')]",
+   "paths": []
+  },
+  "*[class]": {
+   "xpath": "descendant-or-self::*[@class]",
+   "paths": [
+    "/html/body/table/tbody/tr[1]",
+    "/html/body/table/tbody/tr[2]"
+   ]
+  },
+  "div.card[data-x='1']": {
+   "xpath": "descendant-or-self::div[(@class and contains(@class, 'card') and contains(concat(' ', normalize-space(@class), ' '), ' card ')) and (@data-x = '1')]",
+   "paths": []
+  },
+  "input[disabled]": {
+   "xpath": "descendant-or-self::input[@disabled]",
+   "paths": []
+  },
+  "p:empty": {
+   "xpath": "descendant-or-self::p[not(*) and not(string-length())]",
+   "paths": []
+  },
+  "section > p:nth-of-type(2n+1)": {
+   "xpath": "descendant-or-self::section/p[count(preceding-sibling::p) mod 2 = 0]",
+   "paths": []
+  },
+  "div.wrap div.products > article:nth-child(2)": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'wrap') and contains(concat(' ', normalize-space(@class), ' '), ' wrap ')]/descendant::div[@class and contains(@class, 'products') and contains(concat(' ', normalize-space(@class), ' '), ' products ')]/article[count(preceding-sibling::*) = 1]",
+   "paths": []
+  }
+ },
+ "form": {
+  "div": {
+   "xpath": "descendant-or-self::div",
+   "paths": []
+  },
+  "*": {
+   "xpath": "descendant-or-self::*",
+   "paths": [
+    "/html",
+    "/html/body",
+    "/html/body/form",
+    "/html/body/form/input[1]",
+    "/html/body/form/input[2]",
+    "/html/body/form/select",
+    "/html/body/form/select/option[1]",
+    "/html/body/form/select/option[2]",
+    "/html/body/form/button"
+   ]
+  },
+  "article.product": {
+   "xpath": "descendant-or-self::article[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]",
+   "paths": []
+  },
+  ".card": {
+   "xpath": "descendant-or-self::*[@class and contains(@class, 'card') and contains(concat(' ', normalize-space(@class), ' '), ' card ')]",
+   "paths": []
+  },
+  "#p1": {
+   "xpath": "descendant-or-self::*[@id = 'p1']",
+   "paths": []
+  },
+  "div.product > h3": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/h3",
+   "paths": []
+  },
+  "div.product h3": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/descendant::h3",
+   "paths": []
+  },
+  "div.product > span.price": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/span[@class and contains(@class, 'price') and contains(concat(' ', normalize-space(@class), ' '), ' price ')]",
+   "paths": []
+  },
+  "div.product span.price": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/descendant::span[@class and contains(@class, 'price') and contains(concat(' ', normalize-space(@class), ' '), ' price ')]",
+   "paths": []
+  },
+  "ul > li": {
+   "xpath": "descendant-or-self::ul/li",
+   "paths": []
+  },
+  "ul li": {
+   "xpath": "descendant-or-self::ul/descendant::li",
+   "paths": []
+  },
+  "li:first-child": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) = 0]",
+   "paths": []
+  },
+  "li:last-child": {
+   "xpath": "descendant-or-self::li[count(following-sibling::*) = 0]",
+   "paths": []
+  },
+  "li:nth-child(2)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) = 1]",
+   "paths": []
+  },
+  "li:nth-child(odd)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) mod 2 = 0]",
+   "paths": []
+  },
+  "li:nth-child(even)": {
+   "xpath": "descendant-or-self::li[(count(preceding-sibling::*) +1) mod 2 = 0]",
+   "paths": []
+  },
+  "li:nth-child(3n+1)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) mod 3 = 0]",
+   "paths": []
+  },
+  "li:nth-child(-n+2)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) <= 1]",
+   "paths": []
+  },
+  "li:nth-last-child(1)": {
+   "xpath": "descendant-or-self::li[count(following-sibling::*) = 0]",
+   "paths": []
+  },
+  "li:first-of-type": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::li) = 0]",
+   "paths": []
+  },
+  "li:last-of-type": {
+   "xpath": "descendant-or-self::li[count(following-sibling::li) = 0]",
+   "paths": []
+  },
+  "p:only-child": {
+   "xpath": "descendant-or-self::p[count(preceding-sibling::*) = 0 and count(following-sibling::*) = 0]",
+   "paths": []
+  },
+  "span:only-of-type": {
+   "xpath": "descendant-or-self::span[count(preceding-sibling::span) = 0 and count(following-sibling::span) = 0]",
+   "paths": []
+  },
+  "div:empty": {
+   "xpath": "descendant-or-self::div[not(*) and not(string-length())]",
+   "paths": []
+  },
+  ":root": {
+   "xpath": "descendant-or-self::*[not(parent::*)]",
+   "paths": [
+    "/html"
+   ]
+  },
+  "a[href]": {
+   "xpath": "descendant-or-self::a[@href]",
+   "paths": []
+  },
+  "a[href='/a']": {
+   "xpath": "descendant-or-self::a[@href = '/a']",
+   "paths": []
+  },
+  "a[href^='/a']": {
+   "xpath": "descendant-or-self::a[@href and starts-with(@href, '/a')]",
+   "paths": []
+  },
+  "a[href$='b']": {
+   "xpath": "descendant-or-self::a[@href and substring(@href, string-length(@href)-0) = 'b']",
+   "paths": []
+  },
+  "a[href*='b']": {
+   "xpath": "descendant-or-self::a[@href and contains(@href, 'b')]",
+   "paths": []
+  },
+  "div[class~='card']": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'card') and contains(concat(' ', normalize-space(@class), ' '), ' card ')]",
+   "paths": []
+  },
+  "div[data-lang|='en']": {
+   "xpath": "descendant-or-self::div[@data-lang and (@data-lang = 'en' or starts-with(@data-lang, 'en-'))]",
+   "paths": []
+  },
+  "input[type='checkbox']": {
+   "xpath": "descendant-or-self::input[@type = 'checkbox']",
+   "paths": [
+    "/html/body/form/input[2]"
+   ]
+  },
+  "input[type='checkbox']:checked": {
+   "xpath": "descendant-or-self::input[(@type = 'checkbox') and ((@selected and name(.) = 'option') or (@checked and (name(.) = 'input' or name(.) = 'command')and (@type = 'checkbox' or @type = 'radio')))]",
+   "paths": [
+    "/html/body/form/input[2]"
+   ]
+  },
+  "option:checked": {
+   "xpath": "descendant-or-self::option[(@selected and name(.) = 'option') or (@checked and (name(.) = 'input' or name(.) = 'command')and (@type = 'checkbox' or @type = 'radio'))]",
+   "paths": [
+    "/html/body/form/select/option[1]"
+   ]
+  },
+  "a:link": {
+   "xpath": "descendant-or-self::a[@href and (name(.) = 'a' or name(.) = 'link' or name(.) = 'area')]",
+   "paths": []
+  },
+  "li:not(.active)": {
+   "xpath": "descendant-or-self::li[not(@class and contains(@class, 'active') and contains(concat(' ', normalize-space(@class), ' '), ' active '))]",
+   "paths": []
+  },
+  "div:not([data-x])": {
+   "xpath": "descendant-or-self::div[not(@data-x)]",
+   "paths": []
+  },
+  "article, li": {
+   "xpath": "descendant-or-self::article | descendant-or-self::li",
+   "paths": []
+  },
+  "div > ul > li + li": {
+   "xpath": "descendant-or-self::div/ul/li/following-sibling::*[(self::li) and (position() = 1)]",
+   "paths": []
+  },
+  "li ~ li": {
+   "xpath": "descendant-or-self::li/following-sibling::li",
+   "paths": []
+  },
+  "table tr:nth-of-type(2)": {
+   "xpath": "descendant-or-self::table/descendant::tr[count(preceding-sibling::tr) = 1]",
+   "paths": []
+  },
+  "td:last-child": {
+   "xpath": "descendant-or-self::td[count(following-sibling::*) = 0]",
+   "paths": []
+  },
+  "h3:contains('Widget')": {
+   "xpath": "descendant-or-self::h3[contains(., 'Widget')]",
+   "paths": []
+  },
+  "*[class]": {
+   "xpath": "descendant-or-self::*[@class]",
+   "paths": []
+  },
+  "div.card[data-x='1']": {
+   "xpath": "descendant-or-self::div[(@class and contains(@class, 'card') and contains(concat(' ', normalize-space(@class), ' '), ' card ')) and (@data-x = '1')]",
+   "paths": []
+  },
+  "input[disabled]": {
+   "xpath": "descendant-or-self::input[@disabled]",
+   "paths": []
+  },
+  "p:empty": {
+   "xpath": "descendant-or-self::p[not(*) and not(string-length())]",
+   "paths": []
+  },
+  "section > p:nth-of-type(2n+1)": {
+   "xpath": "descendant-or-self::section/p[count(preceding-sibling::p) mod 2 = 0]",
+   "paths": []
+  },
+  "div.wrap div.products > article:nth-child(2)": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'wrap') and contains(concat(' ', normalize-space(@class), ' '), ' wrap ')]/descendant::div[@class and contains(@class, 'products') and contains(concat(' ', normalize-space(@class), ' '), ' products ')]/article[count(preceding-sibling::*) = 1]",
+   "paths": []
+  }
+ },
+ "nested": {
+  "div": {
+   "xpath": "descendant-or-self::div",
+   "paths": [
+    "/html/body/div[1]",
+    "/html/body/div[2]"
+   ]
+  },
+  "*": {
+   "xpath": "descendant-or-self::*",
+   "paths": [
+    "/html",
+    "/html/body",
+    "/html/body/div[1]",
+    "/html/body/div[1]/section",
+    "/html/body/div[1]/section/p[1]",
+    "/html/body/div[1]/section/p[2]",
+    "/html/body/div[1]/section/span",
+    "/html/body/div[1]/section/p[3]",
+    "/html/body/div[2]",
+    "/html/body/div[2]/em"
+   ]
+  },
+  "article.product": {
+   "xpath": "descendant-or-self::article[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]",
+   "paths": []
+  },
+  ".card": {
+   "xpath": "descendant-or-self::*[@class and contains(@class, 'card') and contains(concat(' ', normalize-space(@class), ' '), ' card ')]",
+   "paths": []
+  },
+  "#p1": {
+   "xpath": "descendant-or-self::*[@id = 'p1']",
+   "paths": []
+  },
+  "div.product > h3": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/h3",
+   "paths": []
+  },
+  "div.product h3": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/descendant::h3",
+   "paths": []
+  },
+  "div.product > span.price": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/span[@class and contains(@class, 'price') and contains(concat(' ', normalize-space(@class), ' '), ' price ')]",
+   "paths": []
+  },
+  "div.product span.price": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'product') and contains(concat(' ', normalize-space(@class), ' '), ' product ')]/descendant::span[@class and contains(@class, 'price') and contains(concat(' ', normalize-space(@class), ' '), ' price ')]",
+   "paths": []
+  },
+  "ul > li": {
+   "xpath": "descendant-or-self::ul/li",
+   "paths": []
+  },
+  "ul li": {
+   "xpath": "descendant-or-self::ul/descendant::li",
+   "paths": []
+  },
+  "li:first-child": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) = 0]",
+   "paths": []
+  },
+  "li:last-child": {
+   "xpath": "descendant-or-self::li[count(following-sibling::*) = 0]",
+   "paths": []
+  },
+  "li:nth-child(2)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) = 1]",
+   "paths": []
+  },
+  "li:nth-child(odd)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) mod 2 = 0]",
+   "paths": []
+  },
+  "li:nth-child(even)": {
+   "xpath": "descendant-or-self::li[(count(preceding-sibling::*) +1) mod 2 = 0]",
+   "paths": []
+  },
+  "li:nth-child(3n+1)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) mod 3 = 0]",
+   "paths": []
+  },
+  "li:nth-child(-n+2)": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::*) <= 1]",
+   "paths": []
+  },
+  "li:nth-last-child(1)": {
+   "xpath": "descendant-or-self::li[count(following-sibling::*) = 0]",
+   "paths": []
+  },
+  "li:first-of-type": {
+   "xpath": "descendant-or-self::li[count(preceding-sibling::li) = 0]",
+   "paths": []
+  },
+  "li:last-of-type": {
+   "xpath": "descendant-or-self::li[count(following-sibling::li) = 0]",
+   "paths": []
+  },
+  "p:only-child": {
+   "xpath": "descendant-or-self::p[count(preceding-sibling::*) = 0 and count(following-sibling::*) = 0]",
+   "paths": []
+  },
+  "span:only-of-type": {
+   "xpath": "descendant-or-self::span[count(preceding-sibling::span) = 0 and count(following-sibling::span) = 0]",
+   "paths": [
+    "/html/body/div[1]/section/span"
+   ]
+  },
+  "div:empty": {
+   "xpath": "descendant-or-self::div[not(*) and not(string-length())]",
+   "paths": []
+  },
+  ":root": {
+   "xpath": "descendant-or-self::*[not(parent::*)]",
+   "paths": [
+    "/html"
+   ]
+  },
+  "a[href]": {
+   "xpath": "descendant-or-self::a[@href]",
+   "paths": []
+  },
+  "a[href='/a']": {
+   "xpath": "descendant-or-self::a[@href = '/a']",
+   "paths": []
+  },
+  "a[href^='/a']": {
+   "xpath": "descendant-or-self::a[@href and starts-with(@href, '/a')]",
+   "paths": []
+  },
+  "a[href$='b']": {
+   "xpath": "descendant-or-self::a[@href and substring(@href, string-length(@href)-0) = 'b']",
+   "paths": []
+  },
+  "a[href*='b']": {
+   "xpath": "descendant-or-self::a[@href and contains(@href, 'b')]",
+   "paths": []
+  },
+  "div[class~='card']": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'card') and contains(concat(' ', normalize-space(@class), ' '), ' card ')]",
+   "paths": []
+  },
+  "div[data-lang|='en']": {
+   "xpath": "descendant-or-self::div[@data-lang and (@data-lang = 'en' or starts-with(@data-lang, 'en-'))]",
+   "paths": []
+  },
+  "input[type='checkbox']": {
+   "xpath": "descendant-or-self::input[@type = 'checkbox']",
+   "paths": []
+  },
+  "input[type='checkbox']:checked": {
+   "xpath": "descendant-or-self::input[(@type = 'checkbox') and ((@selected and name(.) = 'option') or (@checked and (name(.) = 'input' or name(.) = 'command')and (@type = 'checkbox' or @type = 'radio')))]",
+   "paths": []
+  },
+  "option:checked": {
+   "xpath": "descendant-or-self::option[(@selected and name(.) = 'option') or (@checked and (name(.) = 'input' or name(.) = 'command')and (@type = 'checkbox' or @type = 'radio'))]",
+   "paths": []
+  },
+  "a:link": {
+   "xpath": "descendant-or-self::a[@href and (name(.) = 'a' or name(.) = 'link' or name(.) = 'area')]",
+   "paths": []
+  },
+  "li:not(.active)": {
+   "xpath": "descendant-or-self::li[not(@class and contains(@class, 'active') and contains(concat(' ', normalize-space(@class), ' '), ' active '))]",
+   "paths": []
+  },
+  "div:not([data-x])": {
+   "xpath": "descendant-or-self::div[not(@data-x)]",
+   "paths": [
+    "/html/body/div[1]",
+    "/html/body/div[2]"
+   ]
+  },
+  "article, li": {
+   "xpath": "descendant-or-self::article | descendant-or-self::li",
+   "paths": []
+  },
+  "div > ul > li + li": {
+   "xpath": "descendant-or-self::div/ul/li/following-sibling::*[(self::li) and (position() = 1)]",
+   "paths": []
+  },
+  "li ~ li": {
+   "xpath": "descendant-or-self::li/following-sibling::li",
+   "paths": []
+  },
+  "table tr:nth-of-type(2)": {
+   "xpath": "descendant-or-self::table/descendant::tr[count(preceding-sibling::tr) = 1]",
+   "paths": []
+  },
+  "td:last-child": {
+   "xpath": "descendant-or-self::td[count(following-sibling::*) = 0]",
+   "paths": []
+  },
+  "h3:contains('Widget')": {
+   "xpath": "descendant-or-self::h3[contains(., 'Widget')]",
+   "paths": []
+  },
+  "*[class]": {
+   "xpath": "descendant-or-self::*[@class]",
+   "paths": [
+    "/html/body/div[2]"
+   ]
+  },
+  "div.card[data-x='1']": {
+   "xpath": "descendant-or-self::div[(@class and contains(@class, 'card') and contains(concat(' ', normalize-space(@class), ' '), ' card ')) and (@data-x = '1')]",
+   "paths": []
+  },
+  "input[disabled]": {
+   "xpath": "descendant-or-self::input[@disabled]",
+   "paths": []
+  },
+  "p:empty": {
+   "xpath": "descendant-or-self::p[not(*) and not(string-length())]",
+   "paths": []
+  },
+  "section > p:nth-of-type(2n+1)": {
+   "xpath": "descendant-or-self::section/p[count(preceding-sibling::p) mod 2 = 0]",
+   "paths": [
+    "/html/body/div[1]/section/p[1]",
+    "/html/body/div[1]/section/p[3]"
+   ]
+  },
+  "div.wrap div.products > article:nth-child(2)": {
+   "xpath": "descendant-or-self::div[@class and contains(@class, 'wrap') and contains(concat(' ', normalize-space(@class), ' '), ' wrap ')]/descendant::div[@class and contains(@class, 'products') and contains(concat(' ', normalize-space(@class), ' '), ' products ')]/article[count(preceding-sibling::*) = 1]",
+   "paths": []
+  }
+ }
+}

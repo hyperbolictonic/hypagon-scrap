@@ -1,0 +1,53 @@
+hypagon-scrap — NOTICE
+
+"I Can't Believe It's Not Scrapling."
+
+This project is a Node/TypeScript port of Scrapling's parser-facing behaviour and
+adaptive relocation, and it bundles or downloads third-party components. The
+original code in this repository is MIT licensed (see LICENSE). The following
+components are attributed and remain under their own licences.
+
+--------------------------------------------------------------------------------
+1. Scrapling — BSD 3-Clause
+   Copyright (c) 2024, Karim shoair
+   https://github.com/d4vinci/Scrapling
+
+   The adaptive relocation algorithms (`relocate` / `find_similar` and their
+   scoring), the element fingerprint shape (`element_to_dict`), and the
+   selector/text API design are ported from Scrapling. Parity tests in
+   `spikes/` and `packages/core/test/` compare against Scrapling 0.5.1.
+
+   Full licence text: packages/core/LICENSE_SCRAPLING.txt
+
+--------------------------------------------------------------------------------
+2. Python difflib — Python Software Foundation License
+   The `SequenceMatcher` port follows CPython's `difflib`, including its
+   autojunk heuristic and ratio semantics.
+
+   Full licence text: packages/core/LICENSE_PSF.txt
+
+--------------------------------------------------------------------------------
+3. libxml2 — MIT
+   Copyright (C) 1998-2012 Daniel Veillard. All Rights Reserved.
+
+   Compiled to WebAssembly (libxml2 2.11.9, HTML + XPath) and distributed with
+   the `hypagon-scrap-libxml2` package.
+
+   Full licence text: packages/libxml2-html-wasm/LICENSE_LIBXML2.txt
+
+--------------------------------------------------------------------------------
+4. curl-impersonate — MIT
+   Copyright (c) 2026 curl_cffi developers
+   https://github.com/lexiforest/curl-impersonate
+
+   Downloaded separately by `hypagon-scrap-fetch-curl` (version 2.3.2, SHA-256
+   verified); it is not bundled in this repository or in the npm tarball. The
+   release archive also contains licences for BoringSSL, brotli, c-ares, cURL,
+   nghttp2, nghttp3, ngtcp2, zlib and zstd, which the fetch script installs
+   alongside the binary.
+
+   Full licence text: packages/core/LICENSE_CURL_IMPERSONATE.txt
+
+--------------------------------------------------------------------------------
+No third-party code is relicensed under MIT. Where a component's licence differs,
+that licence governs that component.

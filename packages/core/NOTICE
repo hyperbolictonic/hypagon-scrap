@@ -1,0 +1,21 @@
+hypagon-scrap — NOTICE
+
+The original code in this package is MIT licensed (see LICENSE). Portions are
+derived from third-party projects:
+
+1. Scrapling — BSD 3-Clause
+   Copyright (c) 2024, Karim shoair
+   https://github.com/d4vinci/Scrapling
+   Relocation algorithms, fingerprint shape and selector/text API design.
+   Full licence: LICENSE_SCRAPLING.txt
+
+2. Python difflib — Python Software Foundation License
+   The SequenceMatcher port follows CPython's difflib.
+   Full licence: LICENSE_PSF.txt
+
+3. curl-impersonate — MIT
+   Copyright (c) 2026 curl_cffi developers
+   Downloaded separately by `hypagon-scrap-fetch-curl`; not included in this
+   package. Full licence: LICENSE_CURL_IMPERSONATE.txt
+
+See the repository NOTICE for the full attribution statement.

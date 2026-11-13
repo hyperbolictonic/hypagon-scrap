@@ -1,0 +1,58 @@
+{
+  "name": "hypagon-scrap",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Scrapling-style selection, adaptive relocation and swappable transports for Node",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyperbolictonic/hypagon-scrap.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/hyperbolictonic/hypagon-scrap#readme",
+  "bugs": {
+    "url": "https://github.com/hyperbolictonic/hypagon-scrap/issues"
+  },
+  "keywords": [
+    "scraping",
+    "scraper",
+    "selectors",
+    "css",
+    "xpath",
+    "relocation",
+    "curl-impersonate",
+    "electron"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "hypagon-scrap-fetch-curl": "./scripts/fetch-curl-impersonate.mjs"
+  },
+  "files": [
+    "dist",
+    "scripts/fetch-curl-impersonate.mjs",
+    "README.md",
+    "NOTICE",
+    "LICENSE*"
+  ],
+  "dependencies": {
+    "hypagon-scrap-libxml2": "0.1.0"
+  },
+  "scripts": {
+    "fetch:curl": "node scripts/fetch-curl-impersonate.mjs",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepack": "npm run build",
+    "pretest": "npm run build",
+    "test": "node --test"
+  }
+}

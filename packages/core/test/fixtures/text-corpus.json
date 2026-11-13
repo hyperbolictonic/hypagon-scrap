@@ -1,0 +1,74 @@
+{
+  "documents": [
+    {
+      "id": "mixed",
+      "html": "<html><body><div id=\"d\">own<span>inner</span>tail</div><div id=\"w\">  lots   of\twhitespace \n here </div><div id=\"n\">Widget 100</div><div id=\"e\">   </div><script>var x = \"Widget 100\";</script><style>.a{color:red}</style><p class=\"desc\">A <b>bold</b> move</p><ul><li>Alpha</li><li>Beta</li><li>Gamma</li></ul></body></html>"
+    },
+    {
+      "id": "nested",
+      "html": "<html><body><section><h1>Title</h1><p>One <em>two</em> three</p><div><script>ignore()</script><span>after</span></div></section></body></html>"
+    }
+  ],
+  "operations": [
+    { "id": "all-default", "kind": "all_text" },
+    { "id": "all-strip", "kind": "all_text", "args": { "strip": true } },
+    { "id": "all-sep", "kind": "all_text", "args": { "separator": "|" } },
+    { "id": "all-noignore", "kind": "all_text", "args": { "ignore_tags": [] } },
+    { "id": "all-novalid", "kind": "all_text", "args": { "valid_values": false } },
+    { "id": "all-scoped", "kind": "all_text", "selector": "#d", "documents": ["mixed"] },
+    { "id": "all-script", "kind": "all_text", "selector": "script", "documents": ["mixed"] },
+    {
+      "id": "find-exact",
+      "kind": "find_text",
+      "args": { "text": "Widget 100", "first_match": false }
+    },
+    {
+      "id": "find-clean-query",
+      "kind": "find_text",
+      "args": { "text": "Widget  100", "first_match": false }
+    },
+    {
+      "id": "find-partial",
+      "kind": "find_text",
+      "args": { "text": "widget", "first_match": false, "partial": true }
+    },
+    {
+      "id": "find-case",
+      "kind": "find_text",
+      "args": { "text": "widget", "first_match": false }
+    },
+    { "id": "find-first", "kind": "find_text", "args": { "text": "Beta" } },
+    {
+      "id": "find-scoped",
+      "kind": "find_text",
+      "args": { "text": "inner" },
+      "selector": "#d",
+      "documents": ["mixed"]
+    },
+    {
+      "id": "find-tail",
+      "kind": "find_text",
+      "args": { "text": "tail", "first_match": false }
+    },
+    {
+      "id": "regex-num",
+      "kind": "find_regex",
+      "args": { "query": "Widget\\s+\\d+", "first_match": false }
+    },
+    {
+      "id": "regex-clean",
+      "kind": "find_regex",
+      "args": { "query": "lots of\\s+whitespace", "first_match": false }
+    },
+    {
+      "id": "regex-case",
+      "kind": "find_regex",
+      "args": { "query": "widget", "first_match": false, "case_sensitive": true }
+    },
+    {
+      "id": "regex-noclean",
+      "kind": "find_regex",
+      "args": { "query": "lots   of", "first_match": false, "clean_match": false }
+    }
+  ]
+}

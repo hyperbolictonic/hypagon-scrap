@@ -1,0 +1,399 @@
+{
+ "baseline-unchanged": {
+  "fp": {
+   "tag": "article",
+   "attributes": {
+    "class": "product",
+    "id": "p1"
+   },
+   "text": null,
+   "path": [
+    "html",
+    "body",
+    "div",
+    "section",
+    "article"
+   ],
+   "parent_name": "section",
+   "parent_attribs": {
+    "class": "products"
+   },
+   "parent_text": null,
+   "siblings": [
+    "article"
+   ],
+   "children": [
+    "h3",
+    "p"
+   ]
+  },
+  "scores": {
+   "/html/body": 9.42,
+   "/html/body/div": 17.38,
+   "/html/body/div/section": 35.69,
+   "/html/body/div/section/article[1]": 100.0,
+   "/html/body/div/section/article[1]/h3": 19.1,
+   "/html/body/div/section/article[1]/p": 26.05,
+   "/html/body/div/section/article[2]": 90.62,
+   "/html/body/div/section/article[2]/h3": 19.1,
+   "/html/body/div/section/article[2]/p": 26.05
+  },
+  "relocate": [
+   "/html/body/div/section/article[1]"
+  ],
+  "findSimilarSameTree": [
+   "/html/body/div/section/article[2]"
+  ],
+  "findSimilarChangedTree": [
+   "/html/body/div/section/article[2]"
+  ]
+ },
+ "class-renamed": {
+  "fp": {
+   "tag": "article",
+   "attributes": {
+    "class": "product",
+    "id": "p1"
+   },
+   "text": null,
+   "path": [
+    "html",
+    "body",
+    "div",
+    "section",
+    "article"
+   ],
+   "parent_name": "section",
+   "parent_attribs": {
+    "class": "products"
+   },
+   "parent_text": null,
+   "siblings": [
+    "article"
+   ],
+   "children": [
+    "h3",
+    "p"
+   ]
+  },
+  "scores": {
+   "/html/body": 9.42,
+   "/html/body/div": 17.38,
+   "/html/body/div/section": 35.69,
+   "/html/body/div/section/article[1]": 91.67,
+   "/html/body/div/section/article[1]/h3": 19.1,
+   "/html/body/div/section/article[1]/p": 26.05,
+   "/html/body/div/section/article[2]": 82.29,
+   "/html/body/div/section/article[2]/h3": 19.1,
+   "/html/body/div/section/article[2]/p": 26.05
+  },
+  "relocate": [
+   "/html/body/div/section/article[1]"
+  ],
+  "findSimilarSameTree": [
+   "/html/body/div/section/article[2]"
+  ],
+  "findSimilarChangedTree": [
+   "/html/body/div/section/article[2]"
+  ]
+ },
+ "sibling-inserted": {
+  "fp": {
+   "tag": "article",
+   "attributes": {
+    "class": "product",
+    "id": "p1"
+   },
+   "text": null,
+   "path": [
+    "html",
+    "body",
+    "div",
+    "section",
+    "article"
+   ],
+   "parent_name": "section",
+   "parent_attribs": {
+    "class": "products"
+   },
+   "parent_text": null,
+   "siblings": [
+    "article"
+   ],
+   "children": [
+    "h3"
+   ]
+  },
+  "scores": {
+   "/html/body": 9.42,
+   "/html/body/div": 17.38,
+   "/html/body/div/section": 35.69,
+   "/html/body/div/section/article[1]": 86.46,
+   "/html/body/div/section/article[1]/h3": 19.1,
+   "/html/body/div/section/article[2]": 95.83,
+   "/html/body/div/section/article[2]/h3": 19.1,
+   "/html/body/div/section/article[3]": 86.46,
+   "/html/body/div/section/article[3]/h3": 19.1
+  },
+  "relocate": [
+   "/html/body/div/section/article[2]"
+  ],
+  "findSimilarSameTree": [
+   "/html/body/div/section/article[2]"
+  ],
+  "findSimilarChangedTree": [
+   "/html/body/div/section/article[1]",
+   "/html/body/div/section/article[3]"
+  ]
+ },
+ "wrapped-in-div": {
+  "fp": {
+   "tag": "article",
+   "attributes": {
+    "class": "product",
+    "id": "p1"
+   },
+   "text": null,
+   "path": [
+    "html",
+    "body",
+    "div",
+    "section",
+    "article"
+   ],
+   "parent_name": "section",
+   "parent_attribs": {
+    "class": "products"
+   },
+   "parent_text": null,
+   "children": [
+    "h3",
+    "p"
+   ]
+  },
+  "scores": {
+   "/html/body": 10.76,
+   "/html/body/div": 19.5,
+   "/html/body/div/div": 33.38,
+   "/html/body/div/div/section": 39.52,
+   "/html/body/div/div/section/article[1]": 71.32,
+   "/html/body/div/div/section/article[1]/div": 36.04,
+   "/html/body/div/div/section/article[1]/div/h3": 20.99,
+   "/html/body/div/div/section/article[1]/div/p": 28.35,
+   "/html/body/div/div/section/article[2]": 67.75,
+   "/html/body/div/div/section/article[2]/div": 36.04,
+   "/html/body/div/div/section/article[2]/div/h3": 20.99,
+   "/html/body/div/div/section/article[2]/div/p": 28.35
+  },
+  "relocate": [
+   "/html/body/div/div/section/article[1]"
+  ],
+  "findSimilarSameTree": [],
+  "findSimilarChangedTree": []
+ },
+ "id-renamed": {
+  "fp": {
+   "tag": "div",
+   "attributes": {
+    "id": "price",
+    "class": "value"
+   },
+   "text": "19.99",
+   "path": [
+    "html",
+    "body",
+    "div",
+    "div"
+   ],
+   "parent_name": "div",
+   "parent_attribs": {
+    "class": "card"
+   },
+   "parent_text": null,
+   "siblings": [
+    "span"
+   ]
+  },
+  "scores": {
+   "/html/body": 7.41,
+   "/html/body/div": 29.98,
+   "/html/body/div/span": 38.7,
+   "/html/body/div/div": 87.1
+  },
+  "relocate": [
+   "/html/body/div/div"
+  ],
+  "findSimilarSameTree": [],
+  "findSimilarChangedTree": []
+ },
+ "text-changed": {
+  "fp": {
+   "tag": "p",
+   "attributes": {
+    "class": "summary"
+   },
+   "text": "A small widget for testing",
+   "path": [
+    "html",
+    "body",
+    "div",
+    "p"
+   ],
+   "parent_name": "div",
+   "parent_attribs": {
+    "class": "item"
+   },
+   "parent_text": null,
+   "siblings": [
+    "h2"
+   ]
+  },
+  "scores": {
+   "/html/body": 8.33,
+   "/html/body/div": 22.81,
+   "/html/body/div/h2": 38.28,
+   "/html/body/div/p": 94.91
+  },
+  "relocate": [
+   "/html/body/div/p"
+  ],
+  "findSimilarSameTree": [],
+  "findSimilarChangedTree": []
+ },
+ "table-layout": {
+  "fp": {
+   "tag": "tr",
+   "attributes": {
+    "class": "row"
+   },
+   "text": null,
+   "path": [
+    "html",
+    "body",
+    "table",
+    "tr"
+   ],
+   "parent_name": "table",
+   "parent_attribs": {},
+   "parent_text": null,
+   "siblings": [
+    "tr"
+   ],
+   "children": [
+    "td",
+    "td"
+   ]
+  },
+  "scores": {
+   "/html/body": 30.16,
+   "/html/body/table": 36.85,
+   "/html/body/table/thead": 25.0,
+   "/html/body/table/thead/tr": 57.3,
+   "/html/body/table/thead/tr/th[1]": 15.51,
+   "/html/body/table/thead/tr/th[2]": 15.51,
+   "/html/body/table/tbody": 25.0,
+   "/html/body/table/tbody/tr": 61.92,
+   "/html/body/table/tbody/tr/td[1]": 15.51,
+   "/html/body/table/tbody/tr/td[2]": 15.51
+  },
+  "relocate": [
+   "/html/body/table/tbody/tr"
+  ],
+  "findSimilarSameTree": [
+   "/html/body/table/tr[1]"
+  ],
+  "findSimilarChangedTree": []
+ },
+ "similar-list": {
+  "fp": {
+   "tag": "div",
+   "attributes": {
+    "class": "card"
+   },
+   "text": null,
+   "path": [
+    "html",
+    "body",
+    "div",
+    "div"
+   ],
+   "parent_name": "div",
+   "parent_attribs": {
+    "class": "list"
+   },
+   "parent_text": null,
+   "siblings": [
+    "div",
+    "div"
+   ],
+   "children": [
+    "a"
+   ]
+  },
+  "scores": {
+   "/html/body": 9.52,
+   "/html/body/div": 37.76,
+   "/html/body/div/div[1]": 97.14,
+   "/html/body/div/div[1]/a": 34.13,
+   "/html/body/div/div[1]/a/span": 11.43,
+   "/html/body/div/div[2]": 97.14,
+   "/html/body/div/div[2]/a": 34.13,
+   "/html/body/div/div[2]/a/span": 11.43,
+   "/html/body/div/div[3]": 97.14,
+   "/html/body/div/div[3]/a": 34.13,
+   "/html/body/div/div[3]/a/span": 11.43,
+   "/html/body/div/div[4]": 97.14,
+   "/html/body/div/div[4]/a": 34.13,
+   "/html/body/div/div[4]/a/span": 11.43
+  },
+  "relocate": [
+   "/html/body/div/div[1]",
+   "/html/body/div/div[2]",
+   "/html/body/div/div[3]",
+   "/html/body/div/div[4]"
+  ],
+  "findSimilarSameTree": [
+   "/html/body/div/div[2]",
+   "/html/body/div/div[3]"
+  ],
+  "findSimilarChangedTree": [
+   "/html/body/div/div[2]",
+   "/html/body/div/div[3]",
+   "/html/body/div/div[4]"
+  ]
+ },
+ "whitespace-heavy": {
+  "fp": {
+   "tag": "div",
+   "attributes": {
+    "class": "content"
+   },
+   "text": "",
+   "path": [
+    "html",
+    "body",
+    "div",
+    "div"
+   ],
+   "parent_name": "div",
+   "parent_attribs": {
+    "class": "wrap"
+   },
+   "parent_text": "",
+   "children": [
+    "p"
+   ]
+  },
+  "scores": {
+   "/html/body": 11.11,
+   "/html/body/div": 44.05,
+   "/html/body/div/div": 100.0,
+   "/html/body/div/div/p": 39.81
+  },
+  "relocate": [
+   "/html/body/div/div"
+  ],
+  "findSimilarSameTree": [],
+  "findSimilarChangedTree": []
+ }
+}

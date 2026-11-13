@@ -1,0 +1,52 @@
+{
+  "name": "hypagon-scrap-libxml2",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "libxml2 2.11.9 HTML parser + XPath in WebAssembly, with explicit document handles",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyperbolictonic/hypagon-scrap.git",
+    "directory": "packages/libxml2-html-wasm"
+  },
+  "homepage": "https://github.com/hyperbolictonic/hypagon-scrap#readme",
+  "bugs": {
+    "url": "https://github.com/hyperbolictonic/hypagon-scrap/issues"
+  },
+  "keywords": [
+    "html",
+    "parser",
+    "libxml2",
+    "xpath",
+    "wasm",
+    "webassembly"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "build",
+    "src/wrapper.c",
+    "scripts",
+    "README.md",
+    "NOTICE",
+    "LICENSE*"
+  ],
+  "scripts": {
+    "build:wasm": "powershell -ExecutionPolicy Bypass -File scripts/build-wasm.ps1",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepack": "node scripts/check-artifact.mjs && npm run build",
+    "pretest": "npm run build",
+    "test": "node --test"
+  }
+}

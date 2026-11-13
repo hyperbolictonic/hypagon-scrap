@@ -1,0 +1,242 @@
+[
+ {
+  "id": "fuzz-0",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><div class=\"summary\">price<td id=\"nbcb\"><a>beta<h3 class=\"list\"></h3><a class=\"box\" id=\"neaa\">alpha</a></a><td class=\"list\" id=\"ncfa\" href=\"/p/9\">gamma<span class=\"list\">item</span><a class=\"product\"></a><a class=\"summary\" id=\"ndce\">gamma</a></td></td><div class=\"box\" href=\"/p/2\"></div></div><a class=\"box\"><td class=\"summary\"><span class=\"product\"><div id=\"nbcb\"></div></span><span></span></td><div class=\"item\">Widget</div><div class=\"item\" src=\"/p/1\" id=\"t\">alpha</div></a></div></body></html>",
+  "changed": "<html><body><div class=\"root\">price<div class=\"box\">price<td id=\"nbcb\"><a>beta<h3 class=\"box new\"></h3><a class=\"box\" id=\"neaa\">alpha</a></a><td class=\"summary\" id=\"ncfa\" href=\"/p/9\">gamma<span class=\"list\">item</span><a class=\"product\">alpha</a><a class=\"summary\" id=\"ndce\">gamma</a></td></td><div class=\"summary big\" href=\"/p/2\">alpha</div></div><a class=\"item\"><td class=\"summary\">price<span class=\"row new\"><div id=\"nbcb\"></div></span><span></span></td><div class=\"item\">Widget</div><div class=\"summary big\" src=\"/p/1\" id=\"t-moved\">alpha</div></a></div></body></html>"
+ },
+ {
+  "id": "fuzz-1",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><span class=\"summary\">delta</span><h3 class=\"value\">price<article class=\"product\" data-x=\"/p/0\">19.99<ul><li class=\"item\"></li></ul></article><ul id=\"t\">item</ul></h3><li><section class=\"summary\">alpha<article>Widget</article><h3 class=\"product\">price</h3><h3 class=\"value\" href=\"/p/3\"><ul class=\"list\">alpha</ul></h3></section></li></div></body></html>",
+  "changed": "<html><body><div class=\"root\"><span class=\"summary\">delta</span><h3 class=\"value\">price<article class=\"product\" data-x=\"/p/0\">19.99<ul><li class=\"item\">x</li></ul></article><ul id=\"t\">item</ul></h3><li><section class=\"summary\">alpha<article>delta</article><h3 class=\"product\">price</h3><h3 class=\"value\" href=\"/p/3\"><ul class=\"list big\">beta</ul></h3></section></li></div></body></html>"
+ },
+ {
+  "id": "fuzz-2",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><span class=\"row\"><td class=\"row\"><a><h3></h3><p class=\"item\" id=\"nbcb\" src=\"/p/8\"></p></a><a class=\"summary\"><td class=\"summary\" id=\"t\">price</td><section>price</section></a></td></span></div></body></html>",
+  "changed": "<html><body><div class=\"root\"><span class=\"row\"><td class=\"row\"><a><h3></h3><p class=\"item\" id=\"nbcb\" src=\"/p/8\"></p></a><a class=\"summary\"><td class=\"summary\" id=\"t\">price</td><section>price</section></a></td></span></div></body></html>"
+ },
+ {
+  "id": "fuzz-3",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><a class=\"summary\" src=\"/p/0\">delta<h3 class=\"summary\">gamma<div class=\"product\" id=\"neac\"><h3 class=\"value\"></h3><h3 id=\"ncaa\" src=\"/p/3\"></h3></div><ul><a class=\"item\"></a><section data-x=\"/p/5\"></section></ul><td class=\"item\">beta</td></h3></a><h3 src=\"/p/1\" id=\"t\"></h3><section class=\"value\" href=\"/p/9\"><a><div class=\"card\">item<div>19.99</div></div><ul class=\"value\"><ul class=\"item\">item</ul><a class=\"value\"></a></ul></a><p class=\"list\">item<div class=\"card\"><p class=\"list\">19.99</p><span id=\"neff\" href=\"/p/8\"></span></div><section class=\"row\"></section></p></section></div></body></html>",
+  "changed": "<html><body><div class=\"root\"><a class=\"row\" src=\"/p/0\">delta<h3 class=\"item big\">gamma<div class=\"product\" id=\"neac\"><h3 class=\"product\"></h3><h3 id=\"ncaa\" src=\"/p/3\">price</h3></div><ul><a class=\"item\"></a><section data-x=\"/p/5\"></section></ul><td class=\"row new\">beta</td></h3></a><h3 src=\"/p/1\" id=\"t-moved\"></h3><section class=\"product big\" href=\"/p/9\">beta<a><div class=\"row new\">item<div>delta</div></div><ul class=\"box new\">x<ul class=\"value new\">item</ul><a class=\"value\"></a></ul></a><p class=\"list\">item<div class=\"card\"><p class=\"card new\">beta</p><span id=\"neff\" href=\"/p/8\">item</span></div><section class=\"row\">alpha</section></p></section></div></body></html>"
+ },
+ {
+  "id": "fuzz-4",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><span src=\"/p/0\">item</span><article class=\"list\" src=\"/p/1\">alpha<section class=\"box\"><span id=\"t\">delta<section class=\"box\" id=\"ncef\"></section><a class=\"value\">item</a><section id=\"nadf\">price</section></span><li class=\"item\" id=\"nbff\">19.99<a class=\"list\" id=\"nafb\">delta</a><span class=\"row\" data-x=\"/p/5\">item</span></li></section><li class=\"box\" data-x=\"/p/6\"></li></article></div></body></html>",
+  "changed": "<html><body><div class=\"root\"><span src=\"/p/0\">item</span><article class=\"list\" src=\"/p/1\">alpha<section class=\"box new\">gamma<span id=\"t-moved\">delta<section class=\"box\" id=\"ncef\"></section><a class=\"card new\">item</a><section id=\"nadf\">price</section></span><li class=\"row new\" id=\"nbff\">19.99<a class=\"list\" id=\"nafb\">delta</a><span class=\"row\" data-x=\"/p/5\">x</span></li></section><li class=\"product new\" data-x=\"/p/6\"></li></article></div></body></html>"
+ },
+ {
+  "id": "fuzz-5",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><li></li><h3 id=\"naba\"><a class=\"item\" id=\"nbdc\" href=\"/p/6\"></a><p class=\"summary\" id=\"naab\"><p class=\"item\">delta<section class=\"value\" id=\"nbca\"></section><td class=\"list\" id=\"nccd\">price</td><p class=\"card\">x</p></p></p><ul class=\"card\"><span>Widget<h3 class=\"list\" href=\"/p/1\" id=\"t\"></h3><li>item</li></span></ul></h3><li class=\"product\">price<div class=\"value\" id=\"nfec\">19.99<div>delta<td>19.99</td></div></div></li></div></body></html>",
+  "changed": "<html><body><div class=\"value new\"><li></li><li class=\"summary\"><li class=\"list\">gamma</li><h3>gamma</h3></li><h3 id=\"naba\"><a class=\"row big\" id=\"nbdc\" href=\"/p/6\">Widget</a><p class=\"summary\" id=\"naab\"><p class=\"item\">delta<section class=\"value\" id=\"nbca\"></section><td class=\"list\" id=\"nccd\">price</td><p class=\"value\">x</p></p></p><ul class=\"row big\"><span>Widget<h3 class=\"list\" href=\"/p/1\" id=\"t\"></h3><li>item</li></span></ul></h3><li class=\"product\">price<div class=\"summary new\" id=\"nfec\">19.99<div>delta<td>19.99</td></div></div></li></div></body></html>"
+ },
+ {
+  "id": "fuzz-6",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><section class=\"row\"><li><a class=\"product\" id=\"neff\"></a><ul class=\"product\">beta<section class=\"card\"></section></ul><li class=\"item\"></li></li><li class=\"value\">x<span class=\"box\" href=\"/p/7\">delta</span></li></section><article id=\"ncef\">19.99<section class=\"summary\" id=\"ndef\">price<span>19.99</span></section><a class=\"box\" id=\"t\">item<h3 href=\"/p/8\">Widget<section class=\"list\">19.99</section></h3><td class=\"summary\"><section class=\"summary\"></section></td></a></article></div></body></html>",
+  "changed": "<html><body><div class=\"root\"><section class=\"value new\"><li><a class=\"product\" id=\"neff\"></a><ul class=\"box big\">beta<section class=\"summary\">Widget</section></ul><li class=\"product big\"></li></li><li class=\"value\">x<span class=\"box\" href=\"/p/7\">Widget</span></li></section><article id=\"ncef\">beta<section class=\"summary\" id=\"ndef\">price<span>price</span></section><a class=\"box\" id=\"t\">item<h3 href=\"/p/8\">Widget<section class=\"item\">19.99</section></h3><td class=\"summary\"><section class=\"summary\">beta</section></td></a></article></div></body></html>"
+ },
+ {
+  "id": "fuzz-7",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><ul class=\"product\" href=\"/p/9\"><div class=\"value\" id=\"t\" href=\"/p/9\"></div></ul></div></body></html>",
+  "changed": "<html><body><div class=\"root\">19.99<ul class=\"item\" href=\"/p/9\">beta<div class=\"value\" id=\"t-moved\" href=\"/p/9\"></div></ul></div></body></html>"
+ },
+ {
+  "id": "fuzz-8",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><ul class=\"card\" id=\"nbeb\">price<ul class=\"item\">alpha<a class=\"value\">beta<td id=\"nacb\">x</td><article class=\"row\">delta</article><p></p></a><section class=\"value\" id=\"neae\"><a class=\"box\" id=\"nece\"></a><a></a><section class=\"box\" id=\"ncdc\"></section></section></ul><p class=\"product\" id=\"nfab\">beta</p><ul class=\"row\"><ul class=\"product\" data-x=\"/p/1\">x<p></p><span class=\"row\">item</span></ul><li class=\"list\" id=\"ndba\"><p class=\"value\" href=\"/p/9\">price</p></li><p class=\"product\">price</p></ul></ul><h3 class=\"list\" src=\"/p/0\" id=\"t\">delta</h3></div></body></html>",
+  "changed": "<html><body><div class=\"root\"><ul class=\"list new\" id=\"nbeb\">price<ul class=\"item\">alpha<a class=\"value\">beta<td id=\"nacb\">x</td><article class=\"row\">delta</article><p></p></a><section class=\"value\" id=\"neae\"><a class=\"box\" id=\"nece\"></a><a>Widget</a><section class=\"box\" id=\"ncdc\"></section></section></ul><p class=\"product\" id=\"nfab\">beta</p><ul class=\"value big\"><ul class=\"product\" data-x=\"/p/1\">19.99<p></p><span class=\"box big\">item</span></ul><li class=\"product big\" id=\"ndba\"><p class=\"value\" href=\"/p/9\">price</p></li><p class=\"product\">price</p></ul></ul><h3 class=\"value big\" src=\"/p/0\" id=\"t\">delta</h3></div></body></html>"
+ },
+ {
+  "id": "fuzz-9",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><li class=\"row\" src=\"/p/8\"></li><li class=\"card\" data-x=\"/p/7\">gamma<div class=\"product\"></div></li><section class=\"item\">item<ul class=\"card\" id=\"nada\"><div class=\"product\" href=\"/p/9\" id=\"t\"><li class=\"product\" id=\"naea\">delta</li></div></ul></section></div></body></html>",
+  "changed": "<html><body><div class=\"item big\"><li class=\"row\" src=\"/p/8\">x</li><li class=\"card\" data-x=\"/p/7\">Widget<div class=\"card\"></div></li><section class=\"row big\">item<ul class=\"card\" id=\"nada\"><div class=\"product\" href=\"/p/9\" id=\"t\"><li class=\"product\" id=\"naea\">delta</li></div></ul></section></div></body></html>"
+ },
+ {
+  "id": "fuzz-10",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><h3 class=\"item\">gamma</h3><a class=\"product\" id=\"t\">Widget<ul class=\"box\"><h3></h3></ul><td class=\"row\" id=\"ncec\">x<ul class=\"list\" src=\"/p/3\">alpha<section></section><p class=\"list\" src=\"/p/1\">delta</p><li class=\"value\">x</li></ul><p><p class=\"list\">alpha</p></p><li id=\"ncdd\">price<a>gamma</a></li></td><h3 class=\"value\" id=\"neec\">gamma<span src=\"/p/0\">alpha</span></h3></a></div></body></html>",
+  "changed": "<html><body><div class=\"summary new\"><h3 class=\"value big\">gamma</h3><a class=\"product\" id=\"t\">Widget<ul class=\"box big\"><h3>x</h3></ul><td class=\"row\" id=\"ncec\">x<ul class=\"row big\" src=\"/p/3\">alpha<section></section><p class=\"card big\" src=\"/p/1\">delta</p><li class=\"summary\">x</li></ul><p><p class=\"list\">alpha</p></p><li id=\"ncdd\">price<a>gamma</a></li></td><h3 class=\"value\" id=\"neec\"><span src=\"/p/0\">delta</span></h3></a></div></body></html>"
+ },
+ {
+  "id": "fuzz-11",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><h3 class=\"item\" id=\"nedf\">price<p class=\"card\" id=\"t\"><td class=\"product\" id=\"nbbe\" src=\"/p/7\">delta<section class=\"product\"></section></td></p><span>beta</span></h3><ul class=\"box\"></ul><article class=\"card\">beta<section class=\"box\"></section></article></div></body></html>",
+  "changed": "<html><body><div class=\"product\"><h3 class=\"summary\" id=\"nedf\"><p class=\"card\" id=\"t-moved\"><td class=\"item big\" id=\"nbbe\" src=\"/p/7\">delta<td class=\"box\" data-x=\"/p/3\"></td><section class=\"product\">19.99</section></td></p><span>beta</span></h3><ul class=\"box\"></ul><article class=\"card\">beta<section class=\"box\">gamma</section></article></div></body></html>"
+ },
+ {
+  "id": "fuzz-12",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\" id=\"t\"><a class=\"row\">price<a class=\"row\">delta</a></a><td id=\"nfcf\"></td></div></body></html>",
+  "changed": "<html><body><div class=\"root\" id=\"t\">19.99<a class=\"row\">price<a class=\"value new\">delta</a></a><td id=\"nfcf\"></td></div></body></html>"
+ },
+ {
+  "id": "fuzz-13",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><p class=\"row\">beta<section class=\"row\">item<span><p>x</p><td></td><span class=\"box\"></span></span></section></p><p class=\"summary\" id=\"t\">Widget<li class=\"box\" data-x=\"/p/7\">delta<li class=\"value\">19.99</li></li><article class=\"summary\" data-x=\"/p/6\"><article><h3 class=\"card\"></h3></article><li class=\"item\" id=\"nfea\">19.99</li></article></p></div></body></html>",
+  "changed": "<html><body><div class=\"root\"><p class=\"row\">Widget<section class=\"row\">item<span><p>x</p><td></td><span class=\"box\"></span></span></section></p><p class=\"summary\" id=\"t\">Widget<li class=\"box\" data-x=\"/p/7\">delta<li class=\"value\">x</li></li><article class=\"summary\" data-x=\"/p/6\"><article>gamma<h3 class=\"card\"></h3></article><li class=\"item\" id=\"nfea\">19.99</li></article></p></div></body></html>"
+ },
+ {
+  "id": "fuzz-14",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><a><section class=\"value\">Widget<section class=\"row\" id=\"nffc\" href=\"/p/1\">alpha</section><section class=\"value\"></section></section><span class=\"list\" id=\"nafd\">price<h3 src=\"/p/1\">alpha<ul class=\"product\" id=\"t\">19.99</ul></h3></span><h3 class=\"summary\">price<article class=\"summary\" id=\"nbdf\">19.99<div class=\"list\">delta</div><div class=\"summary\" href=\"/p/1\">alpha</div><div class=\"box\"></div></article><span class=\"row\" data-x=\"/p/4\">delta<td class=\"list\">x</td></span><td src=\"/p/3\">delta<a class=\"list\">19.99</a></td></h3></a><h3 id=\"nabb\" href=\"/p/2\">price</h3><a id=\"nacf\">gamma</a></div></body></html>",
+  "changed": "<html><body><div class=\"row\"><a><section class=\"item big\">Widget<section class=\"row\" id=\"nffc\" href=\"/p/1\">alpha</section><section class=\"value\">item</section></section><span class=\"list\" id=\"nafd\">19.99<h3 src=\"/p/1\">alpha<ul class=\"product\" id=\"t\">price</ul></h3></span><h3 class=\"summary\">price<article class=\"summary\" id=\"nbdf\">19.99<div class=\"list\">delta</div><div class=\"summary\" href=\"/p/1\">beta</div><div class=\"box\"></div></article><span class=\"product new\" data-x=\"/p/4\"><td class=\"product\">x</td></span><td src=\"/p/3\">delta<a class=\"list\">19.99</a></td></h3></a><h3 id=\"nabb\" href=\"/p/2\">Widget</h3><a id=\"nacf\">gamma</a></div></body></html>"
+ },
+ {
+  "id": "fuzz-15",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><a id=\"t\"><article class=\"summary\">delta<li id=\"nfed\">19.99<span class=\"list\"></span><h3 class=\"product\">gamma</h3><a class=\"card\"></a></li></article><span src=\"/p/8\">x<p class=\"list\" id=\"nccb\">price<h3>gamma</h3><span class=\"value\"></span></p></span></a></div></body></html>",
+  "changed": "<html><body><div class=\"card new\"><a id=\"t\"><article class=\"summary\">delta<li id=\"nfed\">19.99<span class=\"list\"></span><h3 class=\"summary big\">gamma</h3><a class=\"card\"></a></li></article><span src=\"/p/8\">alpha<p class=\"list\" id=\"nccb\">19.99<h3>gamma</h3><span class=\"card new\">item</span></p></span></a></div></body></html>"
+ },
+ {
+  "id": "fuzz-16",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><h3 class=\"item\"><article class=\"card\"><div id=\"t\"></div><h3 class=\"box\">19.99</h3></article><li class=\"row\">beta</li></h3><a class=\"summary\" id=\"nccd\">price</a></div></body></html>",
+  "changed": "<html><body><div class=\"root\"><h3 class=\"item\"><article class=\"card\">gamma<div id=\"t\"></div><h3 class=\"box\">19.99</h3></article><li class=\"row\">beta</li></h3><a class=\"summary\" id=\"nccd\">alpha</a></div></body></html>"
+ },
+ {
+  "id": "fuzz-17",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><section><span id=\"nfdc\"><p id=\"nbbf\"><li class=\"product\" data-x=\"/p/7\"></li></p><p class=\"value\">Widget</p><li class=\"summary\" id=\"t\"><span class=\"item\">item</span></li></span><article><section><li class=\"list\" id=\"nfcd\"></li><section class=\"summary\" id=\"neef\" data-x=\"/p/7\"></section></section><td id=\"ncbf\" href=\"/p/3\"><li id=\"ndaf\"></li><ul class=\"product\">item</ul></td></article></section><td class=\"box\" id=\"nded\">19.99<span>delta<td class=\"value\" id=\"nceb\"><li class=\"item\">x</li><span class=\"item\">gamma</span></td><h3 class=\"row\">item<div>item</div></h3></span><span class=\"card\" id=\"ndfc\"></span><div class=\"item\" href=\"/p/6\">alpha</div></td></div></body></html>",
+  "changed": "<html><body><div class=\"root\"><section>19.99<span id=\"nfdc\"><p id=\"nbbf\">Widget<li class=\"list new\" data-x=\"/p/7\">x</li></p><p class=\"value\">Widget</p><li class=\"summary\" id=\"t\"><span class=\"item\">item</span></li></span><article>price<section><li class=\"list\" id=\"nfcd\"></li><section class=\"summary\" id=\"neef\" data-x=\"/p/7\"></section></section><td id=\"ncbf\" href=\"/p/3\"><li id=\"ndaf\">x</li><ul class=\"product\"></ul></td></article></section><td class=\"box\" id=\"nded\">19.99<span>delta<td class=\"card big\" id=\"nceb\"><li class=\"item\">x</li><span class=\"list\">gamma</span></td><h3 class=\"item new\">item<div>item</div></h3></span><span class=\"card\" id=\"ndfc\">gamma</span><div class=\"item\" href=\"/p/6\">alpha</div></td></div></body></html>"
+ },
+ {
+  "id": "fuzz-18",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><h3 class=\"item\">item<section class=\"product\"><p class=\"list\"><article>19.99</article><a class=\"box\">beta</a><section class=\"row\"></section></p></section><article class=\"value\" id=\"nede\" data-x=\"/p/3\">Widget<span class=\"summary\" id=\"nabf\" href=\"/p/5\"><td></td><p src=\"/p/6\">19.99</p><p class=\"value\" id=\"t\"></p></span><section><p></p><div class=\"summary\" src=\"/p/9\">19.99</div><h3 class=\"summary\"></h3></section><p class=\"row\">alpha</p></article><li>delta<span class=\"item\" id=\"ncae\">beta</span></li></h3></div></body></html>",
+  "changed": "<html><body><div class=\"root\"><h3 class=\"item\">item<section class=\"product\"><p class=\"list\"><article>beta</article><a class=\"box\">beta</a><section class=\"row\"></section></p></section><article class=\"value big\" id=\"nede\" data-x=\"/p/3\">Widget<span class=\"box new\" id=\"nabf\" href=\"/p/5\">beta<td>x</td><p src=\"/p/6\">19.99</p><p class=\"item new\" id=\"t-moved\"></p></span><section><p></p><div class=\"row big\" src=\"/p/9\">19.99</div><h3 class=\"summary\"></h3></section><p class=\"row\">alpha</p></article><li>delta<span class=\"list big\" id=\"ncae\">beta</span></li></h3></div></body></html>"
+ },
+ {
+  "id": "fuzz-19",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><span class=\"value\"><span class=\"list\"><div class=\"item\">price<span src=\"/p/6\" id=\"t\">item</span><td></td><article src=\"/p/3\">gamma</article></div><h3 class=\"summary\" id=\"ndde\" data-x=\"/p/7\">19.99<div class=\"card\"></div></h3></span><section>gamma<h3 class=\"card\" id=\"ncfd\" src=\"/p/1\">alpha<ul class=\"product\" id=\"nbdc\"></ul></h3><article class=\"product\">19.99<div class=\"list\">alpha</div><div>x</div></article></section></span><h3 id=\"ncec\"></h3><a class=\"value\"></a></div></body></html>",
+  "changed": "<html><body><div class=\"product big\">19.99<span class=\"value\"><article class=\"summary\" id=\"nfdc\">Widget</article><span class=\"summary big\"><div class=\"item\">price<span src=\"/p/6\" id=\"t-moved\">item</span><td></td><article src=\"/p/3\">gamma</article></div><h3 class=\"list\" id=\"ndde\" data-x=\"/p/7\">19.99<div class=\"card\"></div></h3></span><section>x<h3 class=\"card\" id=\"ncfd\" src=\"/p/1\"><ul class=\"product\" id=\"nbdc\"></ul></h3><article class=\"summary new\">19.99<div class=\"list\">alpha</div><div>gamma</div></article></section></span><h3 id=\"ncec\"></h3><a class=\"value\">x</a></div></body></html>"
+ },
+ {
+  "id": "fuzz-20",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><span src=\"/p/6\"></span><p class=\"summary\" src=\"/p/5\">x<ul class=\"item\" id=\"naab\"><section class=\"product\">delta<div class=\"box\" id=\"t\">price</div></section><p>19.99</p></ul><p></p><a class=\"row\">item</a></p></div></body></html>",
+  "changed": "<html><body><div class=\"root\">price<p class=\"row\">beta<span class=\"item\" data-x=\"/p/2\">gamma</span><span class=\"card\" id=\"nfcd\">item</span></p><span src=\"/p/6\"></span><p class=\"summary\" src=\"/p/5\"><ul class=\"item\" id=\"naab\"><section class=\"product\">item<div class=\"wrapper\"><div class=\"box\" id=\"t\">price</div></div></section><p>19.99</p></ul><p></p><a class=\"row\">item</a></p></div></body></html>"
+ },
+ {
+  "id": "fuzz-21",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><ul class=\"summary\">x<a class=\"card\" id=\"neda\" href=\"/p/3\"><ul class=\"card\"><div class=\"product\" id=\"nadb\">price</div><p class=\"card\" id=\"t\">delta</p></ul><article class=\"product\" id=\"nded\"><section class=\"summary\">item</section><div id=\"nfda\">x</div><article class=\"list\">gamma</article></article><li><span class=\"row\"></span></li></a></ul><a></a></div></body></html>",
+  "changed": "<html><body><div class=\"root\">delta<ul class=\"summary\">beta<a class=\"item\" id=\"neda\" href=\"/p/3\"><ul class=\"card\"><div class=\"product\" id=\"nadb\">gamma</div><p class=\"card\" id=\"t\">delta</p></ul><article class=\"product\" id=\"nded\"><section class=\"box\">item</section><div id=\"nfda\">x</div><article class=\"list\">gamma</article></article><li><span class=\"row\">delta</span></li></a></ul><a></a></div></body></html>"
+ },
+ {
+  "id": "fuzz-22",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\" id=\"t\"><div class=\"summary\" id=\"naff\"></div></div></body></html>",
+  "changed": "<html><body><div class=\"card new\" id=\"t-moved\">x<div class=\"summary\" id=\"naff\"></div></div></body></html>"
+ },
+ {
+  "id": "fuzz-23",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><div class=\"value\"><h3 class=\"summary\" src=\"/p/7\">19.99<div class=\"card\"><td></td><li class=\"summary\" id=\"nded\">gamma</li></div><a class=\"item\" href=\"/p/6\"><td class=\"list\"></td><h3 class=\"box\" id=\"t\">Widget</h3></a></h3><a class=\"product\" href=\"/p/0\"><div class=\"item\"></div><a src=\"/p/0\">alpha</a><section class=\"item\">beta</section></a></div></div></body></html>",
+  "changed": "<html><body><div class=\"root\">item<div class=\"wrapper\"><div class=\"item new\"><h3 class=\"row\" src=\"/p/7\">19.99<div class=\"card\"><td></td><li class=\"value\" id=\"nded\">item</li></div><a class=\"item\" href=\"/p/6\">gamma<td class=\"list\"></td><h3 class=\"box\" id=\"t-moved\">Widget</h3></a></h3><h3>gamma<article id=\"nfdf\">item</article><h3 class=\"row\"></h3></h3><a class=\"product\" href=\"/p/0\"><div class=\"item\">beta</div><a src=\"/p/0\">alpha</a><section class=\"item\">beta</section></a></div></div></div></body></html>"
+ },
+ {
+  "id": "fuzz-24",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><p class=\"row\" id=\"nffa\"><div class=\"product\" id=\"nbdf\"><span class=\"box\" src=\"/p/5\">Widget</span><article class=\"product\">gamma<section class=\"box\" href=\"/p/7\"></section><li class=\"row\">delta</li><a id=\"nbcc\"></a></article><ul class=\"box\"><p id=\"t\"></p><li class=\"summary\"></li></ul></div><span class=\"list\"><ul>beta</ul><section id=\"nfdd\"><h3 class=\"list\">alpha</h3><h3 class=\"product\" id=\"nbbe\">price</h3></section><p class=\"card\" id=\"naab\">price</p></span></p><p href=\"/p/2\">x</p><td>price<ul class=\"row\" href=\"/p/2\">Widget<article class=\"row\" id=\"ncff\"><section class=\"item\" id=\"need\"></section></article><h3 class=\"row\">delta<div class=\"box\">Widget</div></h3></ul><section class=\"summary\"><article class=\"item\"><li class=\"list\">price</li><h3 class=\"item\" id=\"nbea\"></h3></article></section></td></div></body></html>",
+  "changed": "<html><body><div class=\"root\">beta<p class=\"row\" id=\"nffa\"><div class=\"list\" id=\"nbdf\"><span class=\"box\" src=\"/p/5\">Widget</span><article class=\"product\">gamma<section class=\"box\" href=\"/p/7\"></section><li class=\"row\">gamma</li><a id=\"nbcc\"></a></article><ul class=\"box\">item<p id=\"t\"></p><li class=\"summary\"></li></ul></div><span class=\"list\"><ul>beta</ul><section id=\"nfdd\"><h3 class=\"box big\">delta</h3><h3 class=\"product\" id=\"nbbe\">price</h3></section><p class=\"card\" id=\"naab\">alpha</p></span></p><p href=\"/p/2\">x</p><td>price<ul class=\"summary new\" href=\"/p/2\">beta<article class=\"row\" id=\"ncff\"><section class=\"row new\" id=\"need\"></section></article><div class=\"wrapper\"><h3 class=\"row\">delta<div class=\"box\">Widget</div></h3></div></ul><section class=\"summary\"><article class=\"summary new\"><li class=\"item big\">price</li><h3 class=\"item\" id=\"nbea\"></h3></article></section></td></div></body></html>"
+ },
+ {
+  "id": "fuzz-25",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><article><div class=\"value\" id=\"naef\"><p class=\"summary\" id=\"t\"></p><td class=\"value\"></td></div><span class=\"product\" data-x=\"/p/0\"><ul><h3 class=\"summary\" src=\"/p/6\"></h3><h3 class=\"item\"></h3><p class=\"item\"></p></ul></span></article></div></body></html>",
+  "changed": "<html><body><div class=\"root\"><article><div class=\"value\" id=\"naef\">item<p class=\"summary\" id=\"t\"></p><td class=\"summary new\"></td></div><span class=\"summary new\" data-x=\"/p/0\"><ul><h3 class=\"summary\" src=\"/p/6\"></h3><h3 class=\"item\">alpha</h3><p class=\"item\"></p></ul></span></article></div></body></html>"
+ },
+ {
+  "id": "fuzz-26",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><article class=\"card\" id=\"t\">19.99<ul id=\"nfaf\">gamma<td class=\"value\">item</td></ul></article><a class=\"card\">Widget<ul id=\"ncbe\">x<div class=\"row\">19.99<li class=\"product\">alpha</li></div></ul><ul data-x=\"/p/1\">beta<section class=\"value\">alpha</section></ul><p class=\"product\"><div class=\"card\">19.99<span class=\"product\" id=\"naaf\">item</span></div><h3></h3><span class=\"item\"><ul class=\"list\"></ul><p id=\"nbdb\">Widget</p><ul class=\"summary\" id=\"nefa\" href=\"/p/3\"></ul></span></p></a><p class=\"row\" id=\"neff\"></p></div></body></html>",
+  "changed": "<html><body><div class=\"root\"><article class=\"card\" id=\"t-moved\">19.99<ul id=\"nfaf\">gamma<div class=\"wrapper\"><td class=\"value\">item</td></div></ul></article><a class=\"card\">Widget<ul id=\"ncbe\">x<div class=\"item\">19.99<div></div><li class=\"product\">alpha</li></div></ul><ul data-x=\"/p/1\">beta<section class=\"value\">alpha</section></ul><p class=\"product\"><div class=\"card\">item<span class=\"product\" id=\"naaf\">delta</span></div><h3></h3><span class=\"item\"><ul class=\"list\"></ul><p id=\"nbdb\">Widget</p><ul class=\"summary\" id=\"nefa\" href=\"/p/3\"></ul></span></p></a><p class=\"row\" id=\"neff\"></p></div></body></html>"
+ },
+ {
+  "id": "fuzz-27",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><section id=\"nace\">19.99<article data-x=\"/p/9\">19.99<div class=\"list\" id=\"nfdc\" data-x=\"/p/5\"><span id=\"t\"></span></div><div src=\"/p/2\">alpha<div class=\"row\">item</div></div><h3 src=\"/p/2\">Widget</h3></article></section><a class=\"item\">Widget</a><ul class=\"product\"></ul></div></body></html>",
+  "changed": "<html><body><div class=\"root\"><section id=\"nace\">19.99<article data-x=\"/p/9\"><div class=\"product big\" id=\"nfdc\" data-x=\"/p/5\">delta<span id=\"t\"></span></div><div src=\"/p/2\">alpha<div class=\"box\">x</div></div><h3 src=\"/p/2\">Widget</h3></article></section><a class=\"item\">Widget</a><ul class=\"product\"></ul></div></body></html>"
+ },
+ {
+  "id": "fuzz-28",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><p class=\"row\" id=\"nfdd\">gamma<td class=\"card\" src=\"/p/6\" id=\"t\"><p><td class=\"summary\" id=\"nacf\">x</td><section>beta</section></p></td></p><div class=\"summary\">19.99<article class=\"item\"><article class=\"list\"></article></article></div><h3 id=\"ndeb\">19.99<ul class=\"box\">19.99<a class=\"row\">alpha<li class=\"product\" id=\"nbea\">item</li><a class=\"summary\" id=\"nbbe\">Widget</a><a class=\"value\"></a></a><li class=\"list\">beta<span class=\"value\"></span><p id=\"nbab\"></p></li><article class=\"row\">alpha</article></ul></h3></div></body></html>",
+  "changed": "<html><body><div class=\"value\"><p class=\"box new\" id=\"nfdd\">gamma<td class=\"card\" src=\"/p/6\" id=\"t-moved\"><p><td class=\"list\" id=\"nacf\">Widget</td><section>beta</section></p></td></p><div class=\"summary\">19.99<article class=\"item\"><article class=\"list\"></article></article></div><h3 id=\"ndeb\">19.99<ul class=\"box\">Widget<a class=\"row\">alpha<li class=\"product\" id=\"nbea\">item</li><a class=\"list big\" id=\"nbbe\">Widget</a><a class=\"list\">19.99</a></a><li class=\"item big\">beta<span class=\"box big\">Widget</span><p id=\"nbab\"></p></li><article class=\"row\">alpha</article></ul></h3></div></body></html>"
+ },
+ {
+  "id": "fuzz-29",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><td>19.99</td><div class=\"summary\" id=\"t\">price<td class=\"item\" src=\"/p/6\"><a class=\"box\"><a class=\"box\"></a><ul></ul><li></li></a></td><a class=\"value\"><li><section class=\"card\">19.99</section></li></a></div></div></body></html>",
+  "changed": "<html><body><div class=\"card\">price<td>19.99</td><div class=\"summary\" id=\"t-moved\">delta<td class=\"item\" src=\"/p/6\"><a class=\"card big\">delta<a class=\"box\">gamma</a><ul></ul><li></li></a></td><a class=\"card big\"><article><li class=\"value\" src=\"/p/5\">gamma</li><section class=\"product\">alpha</section></article><li>delta<section class=\"card\">19.99</section></li></a></div></div></body></html>"
+ },
+ {
+  "id": "fuzz-30",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><div class=\"item\" data-x=\"/p/6\">beta<div>gamma<li class=\"product\">item<td class=\"box\">price</td><section class=\"box\">delta</section><li class=\"card\">x</li></li><p class=\"list\" id=\"t\"><span class=\"product\"></span><section class=\"row\">19.99</section></p><article><a>price</a><li class=\"row\">Widget</li></article></div><div class=\"product\">item<a class=\"summary\" src=\"/p/9\"><section class=\"row\" id=\"ndea\">alpha</section><article class=\"summary\" id=\"ndad\">item</article></a><td class=\"list\">beta<h3>Widget</h3><h3 class=\"item\" id=\"nfaa\">x</h3></td><li class=\"row\"><article class=\"row\" data-x=\"/p/9\"></article><p class=\"item\">item</p></li></div></div><ul class=\"card\">19.99</ul><span class=\"product\">price</span></div></body></html>",
+  "changed": "<html><body><div class=\"summary big\"><div class=\"item\" data-x=\"/p/6\">beta<div>gamma<li class=\"product\">item<td class=\"summary big\">price</td><section class=\"box\">delta</section><li class=\"product new\">19.99</li></li><p class=\"summary new\" id=\"t\"><span class=\"product\"></span><section class=\"row\">19.99</section></p><article><a>price</a><li class=\"row\"></li></article></div><div class=\"product\">alpha<a class=\"product\" src=\"/p/9\"><section class=\"card\" id=\"ndea\">alpha</section><article class=\"row new\" id=\"ndad\">item</article></a><td class=\"summary big\">beta<h3>gamma</h3><h3 class=\"item\" id=\"nfaa\">x</h3></td><li class=\"row\"><article class=\"row\" data-x=\"/p/9\">item</article><p class=\"card big\">beta</p></li></div></div><ul class=\"card\">x</ul><span class=\"product\">price</span></div></body></html>"
+ },
+ {
+  "id": "fuzz-31",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><span id=\"naba\"><p id=\"nabb\">19.99<td class=\"card\" id=\"t\">delta<ul class=\"item\" id=\"nbde\">alpha</ul><p class=\"item\" id=\"ndaa\"></p></td></p></span><article class=\"value\" src=\"/p/3\">Widget<li class=\"summary\"></li><section><span class=\"card\"></span><ul class=\"box\">price<li class=\"card\" data-x=\"/p/1\">delta</li></ul></section></article></div></body></html>",
+  "changed": "<html><body><div class=\"row new\"><span id=\"naba\"><p id=\"nabb\">price<td class=\"box new\" id=\"t\">delta<ul class=\"item\" id=\"nbde\">alpha</ul><p class=\"item\" id=\"ndaa\"></p></td></p></span><article class=\"value\" src=\"/p/3\">19.99<li class=\"summary\"></li><section><span class=\"card\"></span><ul class=\"box\"><li class=\"card\" data-x=\"/p/1\">delta</li></ul></section></article></div></body></html>"
+ },
+ {
+  "id": "fuzz-32",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><p class=\"item\">x<div class=\"summary\" data-x=\"/p/2\">delta<article class=\"list\" id=\"neaf\" src=\"/p/0\">alpha<article class=\"box\">item</article><td class=\"product\">Widget</td></article><span class=\"value\"><div>alpha</div><p class=\"card\" href=\"/p/0\">price</p><div class=\"list\" id=\"t\"></div></span></div><article class=\"item\" id=\"ndef\"><td class=\"list\" href=\"/p/3\">beta</td></article></p></div></body></html>",
+  "changed": "<html><body><div class=\"root\"><div class=\"box\" id=\"nabc\" data-x=\"/p/1\">Widget</div><p class=\"list new\">x<div class=\"summary\" data-x=\"/p/2\">gamma<article class=\"list\" id=\"neaf\" src=\"/p/0\">alpha<article class=\"list new\"></article><td class=\"list new\">Widget</td></article><span class=\"item\"><div>alpha</div><p class=\"card\" href=\"/p/0\">price</p><div class=\"list\" id=\"t-moved\">Widget</div></span></div><article class=\"item\" id=\"ndef\">gamma<td class=\"list\" href=\"/p/3\">price</td></article></p></div></body></html>"
+ },
+ {
+  "id": "fuzz-33",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><article><td>item</td></article><section class=\"summary\" id=\"t\"><section>alpha<section href=\"/p/5\"><a class=\"card\">19.99</a></section><p class=\"card\"></p></section><span class=\"product\" src=\"/p/6\">delta<h3 class=\"list\"><span class=\"value\">delta</span><div></div><p></p></h3><td><section class=\"summary\">Widget</section><p class=\"row\"></p><td class=\"list\"></td></td><li></li></span><article class=\"box\" href=\"/p/1\"><td class=\"card\"></td></article></section><p class=\"product\" href=\"/p/0\">delta</p></div></body></html>",
+  "changed": "<html><body><div class=\"product big\">19.99<article class=\"value\">delta<a class=\"value\"></a></article><article><td>price</td></article><section class=\"summary\" id=\"t\"><section>alpha<section href=\"/p/5\"><a class=\"card big\">alpha</a></section><p class=\"card\">gamma</p></section><span class=\"card new\" src=\"/p/6\">delta<h3 class=\"list\"><span class=\"value\">delta</span><div></div><p></p></h3><td>price<section class=\"row big\">Widget</section><p class=\"list new\"></p><td class=\"list\"></td></td><li></li></span><article class=\"box\" href=\"/p/1\"><td class=\"product big\"></td></article></section><p class=\"row new\" href=\"/p/0\">delta</p></div></body></html>"
+ },
+ {
+  "id": "fuzz-34",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><td class=\"item\">beta<section class=\"row\" id=\"ncea\"></section><div class=\"card\">item<ul class=\"item\" data-x=\"/p/2\"><article class=\"product\"></article><section class=\"box\" src=\"/p/2\"></section><li class=\"product\">price</li></ul><li class=\"box\" id=\"nbcc\" data-x=\"/p/4\">x<ul></ul><li>alpha</li></li></div><li class=\"row\">Widget<div>alpha<section class=\"box\" id=\"t\">gamma</section></div><section class=\"row\" data-x=\"/p/5\"><span class=\"row\"></span></section></li></td><a>price</a></div></body></html>",
+  "changed": "<html><body><div class=\"root\"><td class=\"item\">beta<section class=\"row\" id=\"ncea\"></section><div class=\"product new\">item<ul class=\"item\" data-x=\"/p/2\"><article class=\"product\"></article><section class=\"box\" src=\"/p/2\"></section><li class=\"summary new\">price</li></ul><li class=\"box new\" id=\"nbcc\" data-x=\"/p/4\">x<ul></ul><li>alpha</li></li></div><li class=\"row\">Widget<div>alpha<section class=\"box\" id=\"t\">gamma</section></div><section class=\"row\" data-x=\"/p/5\"><span class=\"item\"></span></section></li></td><a>price</a></div></body></html>"
+ },
+ {
+  "id": "fuzz-35",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><li id=\"t\">x<li>alpha</li><span href=\"/p/7\">Widget</span></li></div></body></html>",
+  "changed": "<html><body><div class=\"product new\"><li id=\"t\">gamma<li>alpha</li><span href=\"/p/7\">Widget</span></li></div></body></html>"
+ },
+ {
+  "id": "fuzz-36",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\" id=\"t\"><div></div></div></body></html>",
+  "changed": "<html><body><div class=\"value new\" id=\"t\"><div></div></div></body></html>"
+ },
+ {
+  "id": "fuzz-37",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><a class=\"list\"><td>gamma</td><span class=\"box\"><td>beta</td><div class=\"list\" id=\"neba\">alpha</div></span><article><td class=\"box\"></td><h3 class=\"card\">gamma<li class=\"row\" id=\"nbfe\"></li><section class=\"row\">gamma</section></h3></article></a><ul class=\"card\" href=\"/p/0\"><h3 class=\"item\" id=\"ncab\"><li><section class=\"box\" id=\"t\">price</section></li><article class=\"list\"></article><li class=\"product\">gamma</li></h3></ul><section class=\"card\"></section></div></body></html>",
+  "changed": "<html><body><div class=\"root\">delta<a class=\"row\"><td>gamma</td><span class=\"box\"><td>beta</td><div class=\"list\" id=\"neba\">alpha</div></span><article>x<td class=\"box\"></td><h3 class=\"item new\">gamma<li class=\"row\" id=\"nbfe\"></li><section class=\"product new\">gamma</section></h3></article></a><li class=\"row\"><div class=\"row\" id=\"nfbe\"></div><a id=\"nccf\"></a></li><ul class=\"card\" href=\"/p/0\"><h3 class=\"product new\" id=\"ncab\">price<li><section class=\"box\" id=\"t\">price</section></li><article class=\"list\"></article><li class=\"summary big\">gamma</li></h3></ul><section class=\"product new\"></section></div></body></html>"
+ },
+ {
+  "id": "fuzz-38",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><span class=\"summary\">Widget<section><article id=\"ndbd\">Widget</article><p class=\"box\" id=\"nbda\" src=\"/p/6\"><h3>item</h3><p class=\"product\" id=\"nfeb\"></p></p><p></p></section><div id=\"t\"><td id=\"nbfd\"></td><a class=\"card\" id=\"nbee\"><div class=\"box\" src=\"/p/1\"></div></a></div></span><article class=\"row\" data-x=\"/p/4\">alpha</article></div></body></html>",
+  "changed": "<html><body><div class=\"root\"><span class=\"summary\">Widget<section><article id=\"ndbd\">Widget</article><p class=\"box\" id=\"nbda\" src=\"/p/6\"><h3>item</h3><p class=\"product\" id=\"nfeb\"></p></p><p></p></section><div id=\"t\"><td id=\"nbfd\"></td><a class=\"card\" id=\"nbee\"><div class=\"box\" src=\"/p/1\"></div></a></div></span><div class=\"wrapper\"><article class=\"value new\" data-x=\"/p/4\">alpha</article></div></div></body></html>"
+ },
+ {
+  "id": "fuzz-39",
+  "target": "//*[@id='t']",
+  "original": "<html><body><div class=\"root\"><ul class=\"item\"><li src=\"/p/1\">19.99<ul id=\"ndee\"><ul class=\"list\"></ul><article></article><ul>Widget</ul></ul><h3 class=\"value\" id=\"ncfc\"></h3></li><ul></ul></ul><ul class=\"value\" id=\"neee\"><span class=\"item\" id=\"t\">delta<a class=\"summary\"><article>gamma</article><p class=\"box\" id=\"nabe\" href=\"/p/3\"></p></a></span></ul></div></body></html>",
+  "changed": "<html><body><div class=\"root\">beta<ul class=\"item\"><li src=\"/p/1\">19.99<ul id=\"ndee\"><ul class=\"list\"></ul><article>gamma</article><ul>Widget</ul></ul><h3 class=\"value\" id=\"ncfc\">gamma</h3></li><ul></ul></ul><ul class=\"value\" id=\"neee\"><span class=\"item\" id=\"t\">delta<a class=\"item\"><article>gamma</article><p class=\"box big\" id=\"nabe\" href=\"/p/3\"></p></a></span></ul></div></body></html>"
+ }
+]

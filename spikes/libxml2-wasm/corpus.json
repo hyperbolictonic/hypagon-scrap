@@ -1,0 +1,17 @@
+[
+  { "id": "unclosed-div", "html": "<div><p>hello<span>world" },
+  { "id": "overlap-tags", "html": "<b>bold<i>both</b>italic</i>" },
+  { "id": "stray-close", "html": "<div>a</div></div></section><p>b</p>" },
+  { "id": "nested-table", "html": "<table><tr><td>1<td>2<tr><td>3</table>" },
+  { "id": "p-with-block", "html": "<p>para<div>block</div>tail</p>" },
+  { "id": "unquoted-attrs", "html": "<div class=foo id=bar data-x=1>t</div>" },
+  { "id": "uppercase", "html": "<DIV CLASS=Foo><P>Text</P></DIV>" },
+  { "id": "duplicate-attr", "html": "<div class=\"a\" class=\"b\" id=\"x\">t</div>" },
+  { "id": "entities", "html": "<p>A &amp; B &#39; C &nbsp; D &bogus; E</p>" },
+  { "id": "cjk", "html": "<div lang=\"ja\"><p>日本語テキスト</p><span>中文</span></div>" },
+  { "id": "script-markup", "html": "<div><script>var x = '<div>not a real div</div>';</script>after</div>" },
+  { "id": "template", "html": "<template><div class=\"t\">inside</div></template><div class=\"t\">outside</div>" },
+  { "id": "no-wrapper", "html": "<p>one</p><p>two</p>" },
+  { "id": "deep-nest", "html": "<div><div><div><div><span>x</span></div></div></div></div>" },
+  { "id": "empty-attrs", "html": "<input disabled><input type=text value=\"\">" }
+]
