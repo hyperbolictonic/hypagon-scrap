@@ -63,7 +63,8 @@ try {
 }
 ```
 
-`await using doc = await HtmlDocument.parse(html)` also works.
+`await using doc = await HtmlDocument.parse(html)` also works on Node 24+; on
+older runtimes call `doc.dispose()`.
 
 ## Ownership
 

@@ -64,9 +64,18 @@ test("survives many parse/dispose cycles", async () => {
   }
 });
 
-test("supports explicit resource management", async () => {
-  {
-    await using doc = await HtmlDocument.parse("<html><body><p>scoped</p></body></html>");
+test("exposes Symbol.dispose for explicit resource management", async () => {
+  const doc = await HtmlDocument.parse("<html><body><p>scoped</p></body></html>");
+  try {
     assert.equal(doc.xpath("//p")[0].ownText, "scoped");
+  } finally {
+    if (typeof Symbol.dispose === "symbol") {
+      // `await using` syntax is Node 24+, but the symbol method exists earlier.
+      assert.equal(typeof doc[Symbol.dispose], "function");
+      doc[Symbol.dispose]();
+    } else {
+      doc.dispose();
+    }
   }
+  assert.equal(doc.disposed, true);
 });

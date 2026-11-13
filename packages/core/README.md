@@ -37,7 +37,8 @@ try {
 ```
 
 Disposal matters: `Page` owns a WASM document, and selectors hold nodes from it.
-`await using page = await Page.load(html)` works too.
+`await using page = await Page.load(html)` works on Node 24+; call `page.dispose()`
+on older runtimes.
 
 ## Transports
 
