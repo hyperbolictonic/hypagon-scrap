@@ -1,5 +1,6 @@
 {
   "name": "hypagon-scrap",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "description": "I Can't Believe It's Not Scrapling — a Node port of Scrapling's parser and adaptive relocation",
